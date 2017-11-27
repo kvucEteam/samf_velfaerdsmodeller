@@ -1,0 +1,58 @@
+<!doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml lang=en>
+
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Velfærdsmodeller</title>
+    <meta name="author" content="ato">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../library/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="trekant.css" type="text/css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Velfærdsmodeller</h1>
+        <div class="instr_container"></div>
+        <div id="explanationWrapper"></div>
+    
+    
+        <div class="canvas_container col-md-8 col-sm-12">
+            <canvas id="myCanvas">
+            </canvas>
+        <div class="btn btn-info btn_sektor btn_stat">STAT <span class="glyphicon glyphicon-info-sign"></span></div>
+        <div class="btn btn-info btn_sektor btn_marked">MARKED <span class="glyphicon glyphicon-info-sign"></span></div>
+        <div class="btn btn-info btn_sektor btn_civil">CIVILSAMFUND <span class="glyphicon glyphicon-info-sign"></span></div>
+        </div>
+    
+    <div class="col-md-4 col-sm-12 opg_cont">
+        <h4>Opgave</h4>
+        <h4>Træk i trekantens skæringspunkt og undersøg de forskellige velfærdsmodeller</h4>
+        <h4 class="output"></h4>    
+    </div>
+    
+<div class ="model_btn_container">
+    <div class="btn btn-info btn_model">Den universelle model <span class="glyphicon glyphicon-info-sign"></span></div>
+    <div class="btn btn-info btn_model">Den residuale model <span class="glyphicon glyphicon-info-sign"></span></div>
+    <div class="btn btn-info btn_model">Den selektive model <span class="glyphicon glyphicon-info-sign"></span></div>
+    
+</div>
+        
+    </div>
+    <script src="../library/vendor_scripts.js">
+    </script>
+    <script src="../library/custom_scripts.js">
+    </script>
+    <script type="text/paperscript" src="trekant.js" canvas="myCanvas">
+    </script>
+    <script type="text/javascript ">
+    $(document).ready(function() {
+        //getAjaxData("GET", "json/stigning.json", false, "json");
+        one_line_footer();
+
+    });
+    </script>
+</body>
+
+</html>

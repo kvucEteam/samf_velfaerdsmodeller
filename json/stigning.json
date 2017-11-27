@@ -1,0 +1,100 @@
+{
+    "userInterface": {
+        "header": "Bevægelser i teksten 1",
+        "instruktion": "Brug data fra de tre punkter på bjerget til at udfylde alle spørgsmålstegnene i infokasserne ved vejrstationerne",
+        "explanation": "Formålet med øvelsen er at øge forståelsen af begreberne absolut luftfugtighed (AF) og relativ luftfugtighed (RF), dugpunkt og stigningsregn.",
+        "titel": "Nytårsforsætter",
+        "opg_type": "random",
+        "restart_tekst": "Prøv med et nyt bjerg",
+        "slutfeedback": "De vigtigste pointer: <ul><li>Temperaturen er steget fra den første til den sidste vejrstation i dalene</li><li>Den absolutte luftfugtighed er faldet</li><li>Den relative luftfugtighed er også faldet.</li></ul><p>Efter det har regnet af over bjergets top, er vejret på den anden side af dalen tørt og varmt. Fænomænet kaldes Fønvind og forekommer i alle store bjergegne."
+
+    },
+    "begreber": [{
+        "forkortelse": " (AF)",
+        "navn": "Absolut luftfugtighed",
+        "forklaring": "Den faktiske mængde vand en given mængde luft indeholder. Opgives normalt i g/m<sup>3</sup>."
+    }, {
+        "forkortelse": "",
+        "navn": "Maksimalt vanddampsindhold",
+        "forklaring": "Den mængde vand en luftmasse maksimalt kan indeholde ved en given temperatur. Dette kan aflæses på dugpunktskurven og opgives i g/m<sup>3</sup>."
+    }, {
+        "forkortelse": " (RF)",
+        "navn": "Relativ luftfugtighed",
+        "forklaring": "Forholdet mellem den absolutte luftfugtighed og det maksimale vanddampindhold. Dette opgives i procent."
+    }, {
+        "forkortelse": "",
+        "navn": "Dugpunktskurve",
+        "forklaring": "Beskriver sammenhængen mellem temperatur (x-aksen) og det maksimale vanddampindhold (y-aksen) en luftmasse kan indeholde. Punkter under denne kurve svarer således til at luftmassen ikke er mættet med vanddamp."
+    }, {
+        "forkortelse": " (H)",
+        "navn": "Højde",
+        "forklaring": "Måles i meter over havets overflade (moh)."
+    }, {
+        "forkortelse": " (T)",
+        "navn": "Temperatur",
+        "forklaring": "Måles i <sup>o</sup>C."
+    }, {
+        "forkortelse": "",
+        "navn": "Tøradiabatisk afkøling",
+        "forklaring": "Afkølingen sker tøradiabatisk, hvis luftmassen ikke er mættet med vanddamp. Ved en tøradiabatisk afkøling falder temperaturen med 1<sup>o</sup>C pr. 100 m luftmassen bevæger sig opad."
+    }, {
+        "forkortelse": "",
+        "navn": "Tøradiabatisk opvarmning",
+        "forklaring": "Opvarmningen sker tøradiabatisk, hvis luftmassen ikke er mættet med vanddamp. Ved en tøradiabatisk opvarmning stiger temperaturen med 1<sup>o</sup>C pr. 100 m luftmassen bevæger sig nedad."
+    }, {
+        "forkortelse": "",
+        "navn": "Fugtadiabatisk afkøling",
+        "forklaring": "Afkølingen sker fugtadiabatisk, hvis luftmassen er mættet med vanddamp. Ved en fugtadiabatisk afkøling falder temperaturen med 0,5 <sup>o</sup>C pr. 100 m luftmassen bevæger sig opad. Da luften er mættet vil der ske en fortætning og der falder nedbør."
+    }],
+    "spm": [{
+        "spm_header": "Hvad er den relative luftfugtighed (RF) ved foden af bjergets venstre side?",
+        "spm": "Skriv den relative luftfugtighed ved bjergets fod:",
+        "spm_type": "input",
+        "value": "%",
+        "spm_instruktion": "Start med at <b>aflæse</b> det maskimale vanddampindhold på dugpunktskurven ved den aktuelle temperatur. <br/>Brug så formlen <span><img class='img-responsive' src='img/formel_1.png'/><span> til at <b>udregne</b> den relative luftfugtighed.",
+        "korrekt_svar": "100"
+
+    }, {
+        "spm_header": "Ved hvilken temperatur vil der komme nedbør, når vinden bevæger sig op ad bjerget?",
+        "spm": "",
+        "spm_type": "",
+        "value": "<sup>o</sup>C",
+        "spm_instruktion": "Brug dugpunktskurven til at bestemme hvad temperaturen skal være før luftmassen med den aktuelle luftfugtighed vil være mættet. Altså hvornår den relative luftfugtighed (RF) er nået 100%. <br/>Den aktuelle luftfugtighed (AF) er stadig den samme (da det jo ikke har regnet endnu)",
+        "korrekt_svar": "100"
+    }, {
+        "spm_header": "Hvor højt oppe ad bjerget vil der komme nedbør?",
+        "spm": "",
+        "spm_type": "",
+        "value": "m.o.h",
+        "spm_instruktion": "Brug din viden om tøradiabatisk afkøling (1 grads temperaturfald pr. 100 m stigning) til at <b>beregne</b> hvor højt op af bjerget luftmassen er kommet, når der begynder at regne / sne. <br/>Du skal gange temperaturfaldet med 100 og lægge det til højden ved foden af bjerget.",
+        "korrekt_svar": "100"
+    }, {
+        "spm_header": "Hvor koldt vil det være på toppen af bjerget?",
+        "spm": "<b>Beregn</b> temperaturen på toppen af bjerget.",
+        "spm_type": "",
+        "value": "<sup>o</sup>C",
+        "spm_instruktion": "<b>Beregn</b> hvor stor højdeforskellen er i mellem punktet, hvor nedbøren begynder, og toppen af bjerget. <br/><b>Beregn</b> så vha. din viden om fugtadiabatisk afkøling (0,5 grads temperaturfald pr. 100 m stigning) hvor meget temperaturen vil være faldet og dermed hvad temperaturen er på toppen af bjerget.",
+        "korrekt_svar": "100"
+    }, {
+        "spm_header": "Hvad er den absolutte luftfugtighed på toppen af bjerget",
+        "spm": "Skriv hvad den aktuelle luftfugtighed er på toppen af bjerget: ",
+        "spm_type": "",
+        "value": "g/m<sup>3</sup>",
+        "spm_instruktion": "<b>Aflæs</b> dugpunktskurven for den aktuelle temperatur. <br/><b>Beregn</b> så den absolutte luftfugtighed med formlen <span><img class='img-responsive' src='img/formel_2.png'/><span>",
+        "korrekt_svar": "100"
+    }, {
+        "spm_header": "Hvad er temperaturen ved foden af bjergets læside?",
+        "spm": "Skriv temperatur ved bjergets fod:",
+        "spm_type": "",
+        "value": "<sup>o</sup>C",
+        "spm_instruktion": "Brug din viden om tøradiabatisk opvarmning (1 grads temperaturstigning pr. 100 m fald) til at regne ud hvor meget temperaturen er steget. <br/>Du skal bruge det antal meter, der er fra toppen af bjerget til bjergets fod.",
+        "korrekt_svar": "100"
+    }, {
+        "spm_header": "Hvad er den relative luftfugtighed ved bjergets fod.",
+        "spm": "Skriv  den relative luftfugtighed ved bjergets fod:",
+        "spm_type": "",
+        "value": "%",
+        "spm_instruktion": "<b>Aflæs</b> det maksimale vanddampindhold for temperaturen ved bjergets fod og beregn den relative luftfugtighed. <br/>Den absolutte luftfugtighed er stadig den samme som på bjergets top. <br/>Brug formlen: <span><img class='img-responsive' src='img/formel_1.png'/><span>",
+        "korrekt_svar": "100"
+    }]
+}
