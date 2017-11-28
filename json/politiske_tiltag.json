@@ -1,0 +1,17 @@
+{
+    "userInterface": {
+        "header": "Bevægelser i teksten 1",
+        "instruktion": "Brug data fra de tre punkter på bjerget til at udfylde alle spørgsmålstegnene i infokasserne ved vejrstationerne",
+        "explanation": "Formålet med øvelsen er at øge forståelsen af begreberne absolut luftfugtighed (AF) og relativ luftfugtighed (RF), dugpunkt og stigningsregn.",
+        "titel": "Nytårsforsætter",
+        "opg_type": "random",
+        "restart_tekst": "Prøv med et nyt bjerg",
+        "slutfeedback": "De vigtigste pointer: <ul><li>Temperaturen er steget fra den første til den sidste vejrstation i dalene</li><li>Den absolutte luftfugtighed er faldet</li><li>Den relative luftfugtighed er også faldet.</li></ul><p>Efter det har regnet af over bjergets top, er vejret på den anden side af dalen tørt og varmt. Fænomænet kaldes Fønvind og forekommer i alle store bjergegne."
+
+    },
+        "spm": [{
+        "spm": "Folketinget gør børneydelse og SU indtægtsafhængig og indfører gensidig forsørgerpligt på kontanthjælpen?",
+        "model_udgangspunkt": "Universal",
+        "korrekt_svar": ["20", "42", "38"]
+    }]
+}

@@ -4,7 +4,7 @@ $(".canvas_container").css("height", canvas_height)
 
 var ratio = (canvas_width / 2) / canvas_height;
 
-var top, hojre, venstre, triangle, triangle_clone, crosshair;
+var top, hojre, venstre, triangle, triangle_clone, crosshair, top_pct, venstre_pct, hojre_pct;
 
 
 
@@ -31,7 +31,7 @@ function drawTriangle(toppos, leftpos) {
     top.add(new Point(canvas_width * .5, 0));
     top.add(new Point(canvas_width * .5 - toppos_px * ratio, canvas_height * toppos));
     top.add(new Point(canvas_width * .5 + toppos_px * ratio, canvas_height * toppos));
-
+    top.closed = true;
 
     venstre = new Path();
     // mountain_path.strokeColor = 'white';
@@ -39,7 +39,7 @@ function drawTriangle(toppos, leftpos) {
     venstre.add(new Point(0, canvas_height));
     venstre.add(new Point(leftpos_px, canvas_height));
     venstre.add(new Point(leftpos_px, toppos_px));
-
+    venstre.closed = true;
 
 
     hojre = new Path();
@@ -54,20 +54,63 @@ function drawTriangle(toppos, leftpos) {
     triangle_clone = triangle.clone();
 
 
-    triangle_clone.fillColor = new Color(0, 0, 0, .0000001);
+    triangle_clone.fillColor = new Color(0, 0, 0, .0000000001);
 
     triangle_clone.scale(0.8);
 
 
     //triangle_clone.sendToBack();
 
-    triangle.fillColor = new Color(0.33, 0.33, 0.33, 0.35);
+    //triangle.fillColor = new Color(0.33, 0.33, 0.33, 0.35);
     triangle.strokeColor = new Color(1, 1, 1, .7);
     triangle.strokeWidth = 3;
 
+    var top_area = Math.abs(top.area);
+    var venstre_area = Math.abs(venstre.area);
+    var hojre_area = Math.abs(hojre.area);
+
+    console.log(top_area + "," + venstre_area + "," + hojre_area);
+
+    var total_area = top_area + venstre_area + hojre_area;
+
+    top_pct = Math.round(top_area / total_area * 100);
+    venstre_pct = Math.round(venstre_area / total_area * 100);
+    hojre_pct = Math.round(hojre_area / total_area * 100);
+
+    var modeltype = "Alternativ"
+
+    //check for residual_model
+    if (top_pct > 40 && top_pct < 90) {
+        modeltype = "Universel";
+    } else if (top_pct > 25 && top_pct < 41 && venstre_pct > 25 && venstre_pct < 41 && hojre_pct > 25 && hojre_pct < 41) {
+        modeltype = "Selektiv";
+    } else if (top_pct < 20 && hojre_pct > 40) {
+        modeltype = "Residual";
+    }
+
+
+    console.log(top_pct + ", " + venstre_pct + ", " + hojre_pct);
+
+    triangle.fillColor = new Color(top_pct / 100, venstre_pct / 100, hojre_pct / 100, .35);
+
+    //top_text.fontSize = 8 + (top_pct/ 2);
+
+
+
+    $(".output").html("<h3>Velfærdsmodel: " + modeltype + "</h3>Stat: " + Math.round(top_area / total_area * 100) + "%, Civil: " + Math.round(venstre_area / total_area * 100) + "%, Marked: " + Math.round(hojre_area / total_area * 100) + "%");
 
 
     // Tegn crosshair = dragbar cirkel 
+
+
+
+
+
+
+};
+
+function draw_draggable() {
+
     crosshair = new Path.Circle({
         center: [leftpos_px, toppos_px],
         radius: 25,
@@ -111,7 +154,11 @@ function drawTriangle(toppos, leftpos) {
             crosshair.position += event.delta;
 
             pct_height = crosshair.position.y / canvas_height;
-            pct_width = crosshair.position.y / canvas_width;
+            pct_width = crosshair.position.x / canvas_width;
+
+
+            crosshair_xpos = crosshair.position.x;
+            crosshair_ypos = crosshair.position.y;
 
             console.log("CROSS_Y: " + crosshair.position.y);
 
@@ -119,72 +166,50 @@ function drawTriangle(toppos, leftpos) {
 
 
 
+
+
+            triangle.remove();
+
+            drawTriangle(pct_height, pct_width);
+
             crosshair.bringToFront();
+            /*
+                        while (top.segments.length > 1) {
+                            top.removeSegment(1)
+                                //console.log("hej");
+                        }
+                        top.add(new Point(canvas_width * .5 - crosshair.position.y * ratio, canvas_height * pct_height));
+                        top.add(new Point(canvas_width * .5 + crosshair.position.y * ratio, canvas_height * pct_height));
 
-            while (top.segments.length > 1) {
-                top.removeSegment(1)
-                    //console.log("hej");
-            }
-            top.add(new Point(canvas_width * .5 - crosshair.position.y * ratio, canvas_height * pct_height));
-            top.add(new Point(canvas_width * .5 + crosshair.position.y * ratio, canvas_height * pct_height));
-
-            top.closed = true;
-
-
-            while (venstre.segments.length > 0) {
-                venstre.removeSegment(0)
-                    //console.log("hej");
-            }
-            venstre.add(new Point(canvas_width * .5 - crosshair.position.y * ratio, canvas_height * pct_height));
-            venstre.add(new Point(0, canvas_height));
-            venstre.add(new Point(crosshair.position.x, canvas_height));
-            venstre.add(new Point(crosshair.position.x, crosshair.position.y));
-            venstre.closed = true;
+                        top.closed = true;
 
 
-
-            while (hojre.segments.length > 0) {
-                hojre.removeSegment(0)
-                    //console.log("hej");
-            }
-            hojre.add(new Point(canvas_width, canvas_height));
-            hojre.add(new Point(canvas_width * .5 + crosshair.position.y * ratio, canvas_height * pct_height));
-            hojre.add(new Point(crosshair.position.x, crosshair.position.y));
-            hojre.add(new Point(crosshair.position.x, canvas_height));
-            hojre.closed = true;
-
-
-            var top_area = Math.abs(top.area);
-            var venstre_area = Math.abs(venstre.area);
-            var hojre_area = Math.abs(hojre.area);
-
-            var total_area = top_area + venstre_area + hojre_area;
-
-            var top_pct = Math.round(top_area / total_area * 100);
-            var venstre_pct = Math.round(venstre_area / total_area * 100);
-            var hojre_pct = Math.round(hojre_area / total_area * 100);
-
-            var modeltype = "Alternativ"
-
-            //check for residual_model
-            if (top_pct > 40 && top_pct < 90) {
-                modeltype = "Universel";
-            } else if (top_pct > 25 && top_pct < 41 && venstre_pct > 25 && venstre_pct < 41 && hojre_pct > 25 && hojre_pct < 41) {
-                modeltype = "Selektiv";
-            } else if (top_pct < 20 && hojre_pct > 40) {
-                modeltype = "Residual";
-            }
-
-
-            console.log(top_pct + ", " + venstre_pct + ", " + hojre_pct);
-
-            triangle.fillColor = new Color(top_pct / 100, venstre_pct / 100, hojre_pct / 100, .35);
-
-            //top_text.fontSize = 8 + (top_pct/ 2);
+                        while (venstre.segments.length > 0) {
+                            venstre.removeSegment(0)
+                                //console.log("hej");
+                        }
+                        venstre.add(new Point(canvas_width * .5 - crosshair.position.y * ratio, canvas_height * pct_height));
+                        venstre.add(new Point(0, canvas_height));
+                        venstre.add(new Point(crosshair.position.x, canvas_height));
+                        venstre.add(new Point(crosshair.position.x, crosshair.position.y));
+                        venstre.closed = true;
 
 
 
-            $(".output").html("<h3>Velfærdsmodel: " + modeltype + "</h3>Stat: " + Math.round(top_area / total_area * 100) + "%, Civil: " + Math.round(venstre_area / total_area * 100) + "%, Marked: " + Math.round(hojre_area / total_area * 100) + "%");
+                        while (hojre.segments.length > 0) {
+                            hojre.removeSegment(0)
+                                //console.log("hej");
+                        }
+                        hojre.add(new Point(canvas_width, canvas_height));
+                        hojre.add(new Point(canvas_width * .5 + crosshair.position.y * ratio, canvas_height * pct_height));
+                        hojre.add(new Point(crosshair.position.x, crosshair.position.y
+));
+                        hojre.add(new Point(crosshair.position.x, canvas_height));
+                        hojre.closed = true;
+
+                        */
+
+
 
         } else {
             crosshair.onMouseDrag.off()
@@ -192,13 +217,11 @@ function drawTriangle(toppos, leftpos) {
         }
     }
 
+    crosshair.onMouseUp = function(event) {
+    
 
-
-
-
-};
-
-function draw_draggable() {
+        tjeksvar();
+    }
 
 }
 
@@ -214,15 +237,38 @@ $(".btn_model").click(function() {
     if (indeks == 0) {
 
         drawTriangle(.6, .43);
+        draw_draggable();
 
     } else if (indeks == 1) {
 
 
         drawTriangle(.3, .4);
-
+        draw_draggable();
     } else if (indeks == 2) {
 
         drawTriangle(.47, .5);
+        draw_draggable();
 
     }
+
 });
+
+
+function crosshairfeedback(html) {
+
+    microhint($(".btn_sektor"), html);
+    console.log("CPS: " + crosshair.size);
+
+    console.log($("#myCanvas").offset().left);
+
+    var mh_left = crosshair.position.x + $("#myCanvas").offset().left - $(".microhint").width() / 2 - 10;
+    var mh_top = crosshair.position.y + $("#myCanvas").offset().top + 40;
+
+    $(".microhint").css("left", mh_left).css("top", mh_top);
+
+}
+
+function tjeksvar(){
+        console.log("PCT: " + top_pct);
+
+};
