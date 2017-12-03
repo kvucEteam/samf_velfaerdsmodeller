@@ -4,14 +4,39 @@
         "instruktion": "Brug data fra de tre punkter på bjerget til at udfylde alle spørgsmålstegnene i infokasserne ved vejrstationerne",
         "explanation": "Formålet med øvelsen er at øge forståelsen af begreberne absolut luftfugtighed (AF) og relativ luftfugtighed (RF), dugpunkt og stigningsregn.",
         "titel": "Nytårsforsætter",
-        "opg_type": "random",
+        "opg_1_instruks": "Hvilken sektor bliver større og hvilken bliver mindre? <br/> <br/> Flyt cursoren den rigtige retning på modellen",
         "restart_tekst": "Prøv med et nyt bjerg",
         "slutfeedback": "De vigtigste pointer: <ul><li>Temperaturen er steget fra den første til den sidste vejrstation i dalene</li><li>Den absolutte luftfugtighed er faldet</li><li>Den relative luftfugtighed er også faldet.</li></ul><p>Efter det har regnet af over bjergets top, er vejret på den anden side af dalen tørt og varmt. Fænomænet kaldes Fønvind og forekommer i alle store bjergegne."
 
     },
-        "spm": [{
-        "spm": "Folketinget gør børneydelse og SU indtægtsafhængig og indfører gensidig forsørgerpligt på kontanthjælpen?",
+        "spm_tiltag": [{
+        "spm": "Folketinget gør børneydelse og SU indtægtsafhængig og indfører gensidig forsørgerpligt på kontanthjælpen",
         "model_udgangspunkt": "Universal",
-        "korrekt_svar": ["20", "42", "38"]
+        "korrekt_svar": [46, 28, 25],
+        "retning" : "SELEKTIV", 
+        "feedback": "Civilsamfund styrkes <br/> Marked er konstant <br/> Staten svækkes <br/> <br/>Det er en bevægelse mod en selektiv velfærdsmodel"
+    },{
+        "spm": "Folketinget beslutter at privatisere sygehuse og plejehjem og udlicitere fængslerne",
+        "model_udgangspunkt": "Universal",
+        "retning" : "<b>RESIDUAL</b>",
+        "korrekt_svar": [46, 19, 35],
+        "feedback": "Her er noget feedback til dit svar"
+    },{
+        "spm": "Folketinget beslutter at hæve topskatten for at afskaffe brugerbetaling på tandlæger, uddannelser og kollektiv trafik. ",
+        "model_udgangspunkt": "Universal",
+        "retning" : "mere UNIVERSEL",
+        "korrekt_svar": [66, 18, 15],
+        "feedback": "Her er noget feedback til dit svar"
+    }],
+        "spm_partier": [{
+        "spm": "Folketinget gør børneydelse og SU indtægtsafhængig og indfører gensidig forsørgerpligt på kontanthjælpen",
+        "model_udgangspunkt": "Universal",
+        "korrekt_svar": [66, 36, 38], 
+        "feedback": "Her er noget feedback til dit svar"
+    },{
+        "spm": "Folketinget beslutter at privatisere sygehuse og plejehjem og udlicitere fængslerne",
+        "model_udgangspunkt": "Universal",
+        "korrekt_svar": ["31", "21", "48"],
+        "feedback": "Her er noget feedback til dit svar"
     }]
 }
