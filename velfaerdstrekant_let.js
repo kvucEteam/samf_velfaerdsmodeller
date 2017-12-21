@@ -5,8 +5,8 @@
 
 // OPGAVER I DETTE OBJEKT:
 // =======================
-// Lav boks under cards med info btns fra ATOs velfærdstrekant --> unserMsgBox åbner med tekster fra FR
-// Grå labels med sort tekst omkring "stat", "marked" og "civilsamfund" i dropzones
+// + Lav boks under cards med info btns fra ATOs velfærdstrekant --> unserMsgBox åbner med tekster fra FR
+// + Grå labels med sort tekst omkring "stat", "marked" og "civilsamfund" i dropzones
 
 
 // OPGAVER I ATOs VELFÆRDSTREKANT:
@@ -19,8 +19,8 @@
 
 // VISNINGSITE:
 // ============
-// Opret dran-n-drop udgaven af velfærdstrekanten som opjekt. (HUSK: flyt filer til den egentlige velfærdstrekant)
-// Indsæt about-tekster fra FR
+// + Opret dran-n-drop udgaven af velfærdstrekanten som opjekt. (HUSK: flyt filer til den egentlige velfærdstrekant)
+// + Indsæt about-tekster fra FR
 
 
 // TREKANT SE: - https://upload.wikimedia.org/wikipedia/commons/6/61/Pink_Fire.svg
@@ -377,7 +377,7 @@ function template2() {
 
 	// window.ajustDropzoneHeight = true;
 
-	UserMsgBox_xclick('body', '<h1 class="red">Afsluttende tekst fra Steen og Søren</h1> <div id="tryQuizAgain" class="btn btn-lg btn-primary">Prøv quiz igen</div>');
+	UserMsgBox_xclick('body', '<h1 class="red">Afsluttende tekst fra Steen og Søren</h1> <div id="tryQuizAgain" class="btn btn-primary">Prøv quiz igen</div>');
 }
 
 // The content of this function is only active when the function "template2()""
