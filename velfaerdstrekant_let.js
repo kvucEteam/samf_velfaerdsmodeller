@@ -88,7 +88,7 @@ function makeCardPile(){  							// ADDED d. 04-12-2017
 
 	console.log('makeCardPile - questionObj 1: ' + JSON.stringify(questionObj, null, 4));
 
-	// questionObj = (jsonData.randomizeCards)? ShuffelArray(questionObj) : questionObj;  // This randomizes the questionObj array 	// ADDED d. 04-12-2017
+	questionObj = (jsonData.randomizeCards)? ShuffelArray(questionObj) : questionObj;  // This randomizes the questionObj array 	// ADDED d. 04-12-2017
 
 	window.numOfQuestions = questionObj.length;
 
