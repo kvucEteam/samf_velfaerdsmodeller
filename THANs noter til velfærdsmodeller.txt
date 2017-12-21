@@ -1,0 +1,11 @@
+
+
+NOTER TIL TREKANTEN:
+===================
+
+top.closed = true;   // ".closed" afslutter groperingeringen af objekter så beregningen af arealet kan foretages ifg ATO.
+
+<canvas id="myCanvas" resize></canvas>    // resize="true": Makes the canvas object as high and wide as the Browser window and resizes it whenever the user resizes the window. http://paperjs.org/tutorials/getting-started/working-with-paper-js/
+
+
+http://paperjs.org/reference/path/#add-segment

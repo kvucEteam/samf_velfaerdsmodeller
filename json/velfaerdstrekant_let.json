@@ -1,0 +1,159 @@
+{
+	"heading": "Velfærdstrekant: drag-n-drop",
+	"instruction": "<p>Formålet med denne opgave er at give en introduktion til velfærdstrekanten, der gør det muligt at skelne mellem statens, markedets og civilsamfundets velfærdsrolle.</p><p>Det spiller for eksempel en stor rolle om det er staten, markedet eller civilsamfundet, der skal træde til, hvis man mister sin arbejdsindtægt på grund af opstået arbejdsløshed eller om man bliver syg og får brug for indlæggelse på et hospital.</p><p>Billedeksemplerne i opgaven er fra det danske velfærdssamfund.</p>",
+	"explanation": "",
+	"randomizeCards": true,
+	"useQuestionsFromCategory": [0],
+	"dropzone": [
+		{
+			"num": 0, "NOTE": " <--------------------------------  Dette er cardPile - den skal være første element!",
+			"attr": {"id": "cardPile", "class": "cardPile"},
+			"heading": "Skal denne have en heading",
+			"defaultText": "Træk kort her til."
+		},
+		{
+			"num": 1,
+			"attr": {"id": "dropzone_1", "class": "dropzone"},
+			"heading": "Stat",
+			"defaultText": "Hører billedet til i <span class='btnLabel label label-default'>staten</span>?",
+			"generalFeedback": {
+				"posetive": "Posetive general feedback 1",
+				"negative": "Negative general feedback 1"
+			},
+			"view2_btnText": "Læs tekstudsnittene i sammenhæng",
+			"view2_btnRef" : "#enhedslisten"
+		},
+		{
+			"num": 2,
+			"attr": {"id": "dropzone_2", "class": "dropzone"},
+			"heading": "Civilsamfund",
+			"defaultText": "Hører billedet til i <span class='btnLabel label label-default'>civilsamfundet</span>?",
+			"generalFeedback": {
+				"posetive": "Posetive general feedback 2",
+				"negative": "Negative general feedback 2"
+			},
+			"view2_btnText": "Læs tekstudsnittene i sammenhæng",
+			"view2_btnRef" : "#konservatisme"
+		},
+		{
+			"num": 3,
+			"attr": {"id": "dropzone_3", "class": "dropzone"},
+			"heading": "Marked",
+			"defaultText": "Hører billedet til i <span class='btnLabel label label-default'>markedet</span>?",
+			"generalFeedback": {
+				"posetive": "Posetive general feedback 3",
+				"negative": "Negative general feedback 3"
+			},
+			"view2_btnText": "Læs tekstudsnittene i sammenhæng",
+			"view2_btnRef" : "#liberal_aliance"
+		}
+	],
+	"category": [
+		{
+			"num": 0,
+			"heading": "Category heading 1",
+			"question": [
+				{
+					"NOTE": "=================================================================  Stat  =================================================================",
+					"type": "img",
+					"img": {
+						"attr": {"class": "imgWrap cardContent"},
+						"imgSrc": "img/folkeskole.png"
+					},
+					"correctDropzoneNum": [1],
+					"feedback": {
+						"posetive": "Posetive feedback 1",
+						"negative": "Negative feedback 1"
+					}
+				},{
+					"NOTE": "=================================================================  Civilsamfund  =================================================================",
+					"type": "img",
+					"img": {
+						"attr": {"class": "imgWrap cardContent"},
+						"imgSrc": "img/frivillig.png"
+					},
+					"correctDropzoneNum": [2],
+					"feedback": {
+						"posetive": "Posetive feedback 1",
+						"negative": "Negative feedback 1"
+					}
+				},{
+					"NOTE": "=================================================================  Marked  =================================================================",
+					"type": "img",
+					"img": {
+						"attr": {"class": "imgWrap cardContent"},
+						"imgSrc": "img/privatskole.png"
+					},
+					"correctDropzoneNum": [3],
+					"feedback": {
+						"posetive": "Posetive feedback 1",
+						"negative": "Negative feedback 1"
+					}
+				},
+				{
+					"type": "img",
+					"img": {
+						"attr": {"class": "imgWrap cardContent"},
+						"imgSrc": "img/bank.png"
+					},
+					"correctDropzoneNum": [3],
+					"feedback": {
+						"posetive": "Posetive feedback 1",
+						"negative": "Negative feedback 1"
+					}
+				},
+				{
+					"NOTE": "=================================================================  Stat  =================================================================",
+					"type": "img",
+					"img": {
+						"attr": {"class": "imgWrap cardContent"},
+						"imgSrc": "img/folkeskole.png"
+					},
+					"correctDropzoneNum": [1],
+					"feedback": {
+						"posetive": "Posetive feedback 1",
+						"negative": "Negative feedback 1"
+					}
+				},
+				{
+					"NOTE": "=================================================================  Stat  =================================================================",
+					"type": "img",
+					"img": {
+						"attr": {"class": "imgWrap cardContent"},
+						"imgSrc": "img/offentligesygehuse.png"
+					},
+					"correctDropzoneNum": [1],
+					"feedback": {
+						"posetive": "Posetive feedback 1",
+						"negative": "Negative feedback 1"
+					}
+				},
+				{
+					"NOTE": "=================================================================  Civilsamfund  =================================================================",
+					"type": "img",
+					"img": {
+						"attr": {"class": "imgWrap cardContent"},
+						"imgSrc": "img/familiepasserborn.png"
+					},
+					"correctDropzoneNum": [2],
+					"feedback": {
+						"posetive": "Posetive feedback 1",
+						"negative": "Negative feedback 1"
+					}
+				},{
+					"NOTE": "=================================================================  Marked  =================================================================",
+					"type": "img",
+					"img": {
+						"attr": {"class": "imgWrap cardContent"},
+						"imgSrc": "img/privathospital.png"
+					},
+					"correctDropzoneNum": [3],
+					"feedback": {
+						"posetive": "Posetive feedback 1",
+						"negative": "Negative feedback 1"
+					}
+				}
+			]
+		}
+	]
+}

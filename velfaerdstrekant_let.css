@@ -1,0 +1,282 @@
+
+
+
+
+.card{
+	border: 1px solid #999;
+    width: 95%;            /* <------------ Størrelsen på cards */
+    min-height: 150px;
+    max-width: 300px;      /* <------------ Vigtig i mobilvisning */ 
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    overflow: auto;
+}
+
+.cardContent {
+	/*border: 1px solid #999;*/
+	/*height: 100%;*/
+}
+
+#instructionWrap{
+	padding-left: 0px;
+}
+
+#explanationWrap{
+	padding-left: 0px;
+}
+
+#cardPile {
+	/*height: 250px;*/
+	height: 300px;
+	position: relative;
+
+	width: 100%;
+	max-width: 300px;
+
+	/*top: 21%;*/
+	/*margin-bottom: 20%;*/
+	/*display: inline-block;*/
+	/*width: 44%;*/
+	/*padding-top: 30%;*/
+	/*margin: 10px;*/
+}
+
+.cardPile {
+	top: 21%;
+	/*margin-bottom: 20%;*/
+	/*margin-bottom: 12%;*/
+	/*margin-bottom: 6%;*/
+}
+
+
+
+.dropzoneWrap{
+	display: inline-block;
+	width: 50%;
+	/*border: 1px solid #999;*/
+	/*margin: 10px;*/
+}
+
+.dropzone{     /* <-------- VIGTIGT: Højden justeres af JavaScript funktionen: "resizeElements()"; */
+	/*display: inline-block;*/
+	position: relative;
+	width: 96%;
+	margin-left: 2%; 
+	border: 1px dashed #999;
+	border-radius: 6px;
+}
+
+
+
+/*
+.cardzone {
+	display: inline-block;
+	width: 44%;
+	margin: 10px;
+}
+*/
+.sortableZone{
+	padding:20px;
+}
+
+.sortable_text_container {
+    -moz-user-select: none;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px #ddd;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    overflow: auto;
+    padding: 20px 10% 20px 20px;
+}
+
+.ui-sortable-helper{
+	left: 0px;
+}
+
+.spacer{
+	margin-top: 10px;
+}
+
+.spacerWrap{
+	margin-left: 15px;
+	margin-right: 15px;
+	width: 45%;
+	float: left;
+}
+
+
+/*.centerText, .centerBtn {*/
+.centerText {
+	width: 68%;
+	position: absolute;
+	top: 53%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.centerBtn {
+	display: none;
+	margin-left: 2%;
+}
+
+
+.problemFormulationText{
+	margin-bottom: 20px;
+}
+
+
+
+.Clone{
+	height: 100%;
+	width: auto;
+	/*opacity: 0.5;*/
+	overflow: hidden;
+}
+
+.glyphicons-bin{
+	color: #717272;
+	font-size: 5em;
+	margin-top: 20%;
+	margin-left: 38%;
+	position: relative;
+	z-index: 5;
+}
+
+#dropzoneContainer {
+	/*display: flex;*/
+}
+
+
+.dropzoneRow {
+	display: flex;
+	/*height: 50%;*/
+}
+
+
+.answer {
+	font-style: italic;
+}
+
+#microhint_target {
+	width: 50%;
+	position: relative;
+	/*top: 80%;*/
+	top: 125%;    /* <----- Quickfix for putting the microhint om the btn*/
+	z-index: -1;
+	/*border: 1px solid red;*/
+}
+
+
+#hiddenContent {
+	display: none;
+}
+
+.boldText {
+	font-weight: 700;
+}
+
+#UserMsgBox p {
+	margin-bottom: 10px;
+}
+
+.score_container_wrap {
+	padding-bottom: 25px;
+}
+
+.score_container {
+	position: relative;
+	top: 25px;
+    left: 10px;
+}
+
+
+/*****************************************************************************/
+
+.red {
+	color: #F00;
+}
+
+.card_mobile {
+	width: inherit;
+}
+
+.cardPile_mobile {
+	/*margin-left: 25%;*/ 
+	/*margin-right: 25%; */
+	width: 87% !important;
+	margin-left: calc((100% - 370px)/2);
+	margin-right: calc((100% - 370px)/2);
+}
+
+
+#dropzone_1{
+	margin-bottom: 4%;
+	margin-left: 50%;
+}
+
+#triangleContainer {
+	/*width: 61%;*/
+	width: 83%;				/* <-------- Triangle-size-ajust */
+	top: 0.5%;
+    position: absolute;
+    margin-left: 5.5%;       /* <-------- Triangle-size-ajust */
+}
+
+.Clone {   /* <-------- VIGTIGT: "height" og "width" sættes inline af JavaScript funktionen "simpleClone()" */
+	min-height: inherit;
+	border: none; 
+	background-color: initial;
+	display: inline-block;
+	margin-left: 13%;  
+	margin-top: 3%;
+}
+
+.dropzoneContent {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.btnLabel {
+	margin-left: 0px;
+	background-color: #cececc;
+    font-weight: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+
+.infoContainer {
+	position: relative;
+	margin-top: 12%;
+	display: block;
+	max-width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.infoContainer_mobile {
+	max-width: none;
+	margin-left: calc((100% - 370px)/2);
+	margin-top: 0%;
+	margin-bottom: 10px;
+}
+
+.btnInfo {
+	display: block;
+	/*text-align: left;*/
+	margin: 10px 0px 0px 0px;
+}
+
+.btnInfo .glyphicon {
+	margin-left: 5px;
+	font-size: 1.1em;
+	top: 2px;
+}
+
+.btnInfo_mobile {
+	display: inline-block;
+	margin-right: 10px;
+}
