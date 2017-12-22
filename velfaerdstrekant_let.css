@@ -253,14 +253,15 @@
 	margin-top: 12%;
 	display: block;
 	max-width: 150px;
-	margin-left: auto;
-	margin-right: auto;
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
 }
 
 .infoContainer_mobile {
 	max-width: none;
 	margin-left: calc((100% - 370px)/2);
-	margin-top: 0%;
+	position: relative;
+	top: 10px;
 	margin-bottom: 10px;
 }
 
@@ -280,3 +281,8 @@
 	display: inline-block;
 	margin-right: 10px;
 }
+
+.score_container_mobile {
+	margin-left: calc((100% - 360px)/2);
+}
+

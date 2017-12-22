@@ -91,6 +91,18 @@
 					}
 				},
 				{
+					"type": "img",
+					"img": {
+						"attr": {"class": "imgWrap cardContent"},
+						"imgSrc": "img/offentligvuggestue.png"
+					},
+					"correctDropzoneNum": [1],
+					"feedback": {
+						"posetive": "Posetive feedback 1",
+						"negative": "Negative feedback 1"
+					}
+				},
+				{
 					"NOTE": "=================================================================  Civilsamfund  =================================================================",
 					"type": "img",
 					"img": {
@@ -157,6 +169,30 @@
 					"img": {
 						"attr": {"class": "imgWrap cardContent"},
 						"imgSrc": "img/privatskole.png"
+					},
+					"correctDropzoneNum": [3],
+					"feedback": {
+						"posetive": "Posetive feedback 1",
+						"negative": "Negative feedback 1"
+					}
+				},
+				{
+					"type": "img",
+					"img": {
+						"attr": {"class": "imgWrap cardContent"},
+						"imgSrc": "img/bank.png"
+					},
+					"correctDropzoneNum": [3],
+					"feedback": {
+						"posetive": "Posetive feedback 1",
+						"negative": "Negative feedback 1"
+					}
+				},
+				{
+					"type": "img",
+					"img": {
+						"attr": {"class": "imgWrap cardContent"},
+						"imgSrc": "img/sundhedsforsikring.png"
 					},
 					"correctDropzoneNum": [3],
 					"feedback": {

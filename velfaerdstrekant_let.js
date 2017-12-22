@@ -301,7 +301,7 @@ function template() {
 
 	HTML += '<div id="cardPileWrap" class="col-xs-12 col-md-4">';
 	HTML += 	'<div '+generateAttrStr(jsonData.dropzone[0].attr)+'>'+makeCardPile()+' &nbsp; </div>';
-	HTML += 	'<div class="infoContainer">';
+	HTML += 	'<div class="infoContainer hidden-xs hidden-sm">';
 	HTML += 		'<span class="btn_stat btnInfo btn btn-default"> Stat <span class="glyphicon glyphicon-info-sign"></span></span>';
 	HTML += 		'<span class="btn_civilsamfund btnInfo btn btn-default"> Civilsamfund <span class="glyphicon glyphicon-info-sign"></span></span>';
 	HTML += 		'<span class="btn_marked btnInfo btn btn-default"> Marked <span class="glyphicon glyphicon-info-sign"></span></span>';
@@ -342,6 +342,12 @@ function template() {
 		}
 		HTML += '</div>';  // END #dropzoneContainer
 	HTML += '</div>';  // END #triangleAndDropzoneContainer
+
+	HTML += 	'<div class="infoContainer hidden-md hidden-lg marginTop_20px">';
+	HTML += 		'<span class="btn_stat btnInfo btn btn-default"> Stat <span class="glyphicon glyphicon-info-sign"></span></span>';
+	HTML += 		'<span class="btn_civilsamfund btnInfo btn btn-default"> Civilsamfund <span class="glyphicon glyphicon-info-sign"></span></span>';
+	HTML += 		'<span class="btn_marked btnInfo btn btn-default"> Marked <span class="glyphicon glyphicon-info-sign"></span></span>';
+	HTML += 	'</div>';
 
 	console.log('template - HTML: ' + HTML);
 	return HTML;
@@ -548,11 +554,13 @@ function ajustMobileView() {
 		$('#cardPile').addClass('cardPile_mobile');
 		$('.infoContainer').addClass('infoContainer_mobile');
 		$('.btnInfo').addClass('btnInfo_mobile');
+		$('.score_container').addClass('score_container_mobile');
 	} else {
 		$('.card').removeClass('card_mobile');
 		$('#cardPile').removeClass('cardPile_mobile');
 		$('.infoContainer').removeClass('infoContainer_mobile');
 		$('.btnInfo').removeClass('btnInfo_mobile');
+		$('.score_container').removeClass('score_container_mobile');
 	}
 }
 
