@@ -286,7 +286,8 @@ function template() {
 
 	var HTML = '';
 	HTML += '<h1>'+jsonData.heading+'</h1>';
-	HTML += (jsonData.hasOwnProperty('instruction') && (jsonData.instruction!==''))? instruction(jsonData.instruction) : '';
+	// HTML += (jsonData.hasOwnProperty('instruction') && (jsonData.instruction!==''))? instruction(jsonData.instruction) : '';
+	HTML += (jsonData.hasOwnProperty('instruction') && (jsonData.instruction!==''))? instruction_noLines(jsonData.instruction) : '';
 	HTML += (jsonData.hasOwnProperty('explanation') && (jsonData.explanation!==''))? explanation(jsonData.explanation) : '';
 	HTML += '<div class="Clear"></div>';
 	HTML += '<div id="cardContainer">';
@@ -509,15 +510,15 @@ function update_scoreCounter(dObj) {
 // });
 
 $(document).on('click touchend', ".btn_stat", function(event) {
-	UserMsgBox_xclick("body", '<h4>Stat</h4>Staten varetager en stor del af serviceydelserne og omfordelingen i det danske samfund. Det gælder fx i den offentlige sektor i forhold til sundhed, uddannelse og social sikkerhed. Den offentlige sektor bliver finansieret via skatter og afgifter. Centrale aktører i staten er regering, folketinget, kommunalbestyrelser og regioner. I staten bliver love og regler vedtaget via politiske beslutninger. De politiske beslutninger bliver afgjort af partier og andre aktørers magt og holdninger. Ofte bliver fordelingen af velfærdsydelser reguleret af rettigheder og pligter.  ');
+	UserMsgBox_xclick("body", '<h2>Stat</h2><p>Staten varetager en stor del af serviceydelserne og omfordelingen i det danske samfund. Det gælder fx i den offentlige sektor i forhold til sundhed, uddannelse og social sikkerhed. Den offentlige sektor bliver finansieret via skatter og afgifter.</p> <p>Centrale aktører i staten er regering, folketinget, kommunalbestyrelser og regioner. I staten bliver love og regler vedtaget via politiske beslutninger. De politiske beslutninger bliver afgjort af partier og andre aktørers magt og holdninger. Ofte bliver fordelingen af velfærdsydelser reguleret af rettigheder og pligter.</p>');
 });
 
 $(document).on('click touchend', ".btn_civilsamfund", function(event) {
-	UserMsgBox_xclick("body", '<h4>Civilsamfund</h4>Civilsamfundet omfatter familien, netværk, frivillige foreninger og ikke-statslige fællesskaber og organisationer. Hvis civilsamfundet er afgørende for produktion og fordeling af velfærdsgoder, er det derfor i høj grad styret af følelser fx kærlighed, venskab, solidaritet eller moral, altså uformelle værdier og normer.');
+	UserMsgBox_xclick("body", '<h2>Civilsamfund</h2>Civilsamfundet omfatter familien, netværk, frivillige foreninger og ikke-statslige fællesskaber og organisationer. Hvis civilsamfundet er afgørende for produktion og fordeling af velfærdsgoder, er det derfor i høj grad styret af følelser fx kærlighed, venskab, solidaritet eller moral, altså uformelle værdier og normer.');
 });
 
 $(document).on('click touchend', ".btn_marked", function(event) {
-	UserMsgBox_xclick("body", '<h4>Marked</h4>Markedet er den arena, hvor varer og tjenesteydelser bliver handlet. Virksomheder og forbrugere er de væsentligste aktører og den væsentligste drivkraft er at tjene penge og at købe produkter og serviceydelser. Private virksomheder producerer også fx uddannelse, sundhed og forsikringer. Alt omregnes til pengeværdier og markedsmekanismen (udbud og efterspørgsel) er med til at sætte prisen.  ');
+	UserMsgBox_xclick("body", '<h2>Marked</h2>Markedet er den arena, hvor varer og tjenesteydelser bliver handlet. Virksomheder og forbrugere er de væsentligste aktører og den væsentligste drivkraft er at tjene penge og at købe produkter og serviceydelser. Private virksomheder producerer også fx uddannelse, sundhed og forsikringer. Alt omregnes til pengeværdier og markedsmekanismen (udbud og efterspørgsel) er med til at sætte prisen.  ');
 });
 
 
@@ -595,7 +596,7 @@ detectBootstrapBreakpoints();  // This function call has to be here, due to the 
 $(window).resize(function() {
 	ajustDropzoneHeight_template2();
 
-	resizeElements('.dropzone', 0.78);  // 0.55
+	resizeElements('.dropzone', 0.88);  // 0.78
 	ajustMobileView();
 });
 
@@ -616,7 +617,7 @@ $(document).ready(function() {
 
 	$('#interface').append(make_scoreCounter());
 
-	resizeElements('.dropzone', 0.78);  // 0.55
+	resizeElements('.dropzone', 0.88);  // 0.78
 	ajustMobileView();
 
 

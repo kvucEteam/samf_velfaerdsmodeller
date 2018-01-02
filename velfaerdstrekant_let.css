@@ -26,6 +26,10 @@
 	padding-left: 0px;
 }
 
+#triangleAndDropzoneContainer {
+	padding: 0px;
+}
+
 #cardPile {
 	/*height: 250px;*/
 	height: 300px;
@@ -44,6 +48,7 @@
 
 .cardPile {
 	top: 21%;
+	left: -25px;
 	/*margin-bottom: 20%;*/
 	/*margin-bottom: 12%;*/
 	/*margin-bottom: 6%;*/
@@ -61,10 +66,16 @@
 .dropzone{     /* <-------- VIGTIGT: Højden justeres af JavaScript funktionen: "resizeElements()"; */
 	/*display: inline-block;*/
 	position: relative;
-	width: 96%;
-	margin-left: 2%; 
+	width: 98%;
+	/*margin-left: 2%;*/ 
+	margin-right: 0%;
 	border: 1px dashed #999;
 	border-radius: 6px;
+}
+
+#dropzone_3 { 
+	margin-left: 2%;
+	float: right;
 }
 
 
@@ -115,6 +126,8 @@
 	top: 53%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
+	text-align: center;
 }
 
 .centerBtn {
@@ -147,6 +160,8 @@
 
 #dropzoneContainer {
 	/*display: flex;*/
+	width: 100%;
+	margin-left: 0%;
 }
 
 
@@ -207,6 +222,7 @@
 	/*margin-left: 25%;*/ 
 	/*margin-right: 25%; */
 	width: 87% !important;
+	left: 0%;
 	margin-left: calc((100% - 370px)/2);
 	margin-right: calc((100% - 370px)/2);
 }
@@ -219,10 +235,10 @@
 
 #triangleContainer {
 	/*width: 61%;*/
-	width: 83%;				/* <-------- Triangle-size-ajust */
+	width: 100%; /*width: 83%;*/				/* <-------- Triangle-size-ajust */
 	top: 0.5%;
     position: absolute;
-    margin-left: 5.5%;       /* <-------- Triangle-size-ajust */
+    margin-left: 0%; /*5.5%;*/       /* <-------- Triangle-size-ajust */
 }
 
 .Clone {   /* <-------- VIGTIGT: "height" og "width" sættes inline af JavaScript funktionen "simpleClone()" */
@@ -266,9 +282,10 @@
 }
 
 .btnInfo {
-	display: block;
+	/*display: block;*/
 	/*text-align: left;*/
 	margin: 10px 0px 0px 0px;
+	text-align: left;
 }
 
 .btnInfo .glyphicon {
@@ -286,3 +303,23 @@
 	margin-left: calc((100% - 360px)/2);
 }
 
+.imgContainer {
+	padding: 2px 2px 0px 2px;
+}
+
+/**************************  Shared unctions  *********************************/
+/*
+.instruction_noLines {
+	border: none;
+	font-weight: 500;
+	padding-top: 0px
+}
+
+.instruction_noLines:before {
+	border: none;
+}
+
+.instruction_noLines h4 {
+	margin-top: 0px; 
+}
+*/
