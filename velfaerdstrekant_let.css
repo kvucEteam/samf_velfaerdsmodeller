@@ -123,7 +123,7 @@
 .centerText {
 	width: 68%;
 	position: absolute;
-	top: 53%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 
@@ -247,7 +247,7 @@
 	background-color: initial;
 	display: inline-block;
 	margin-left: 13%;  
-	margin-top: 3%;
+	margin-top: 0%;
 }
 
 .dropzoneContent {

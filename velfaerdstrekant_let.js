@@ -271,8 +271,8 @@ function SimpleClone(TargetSelector) {
         'left': 'auto',
         'z-index': '0',
         // 'height': '83%',
-        'height': '50%', // <---- NEW
-        'width': '30%'    // <---- NEW
+        'height': '55%', // <---- NEW
+        'width': '35%'    // <---- NEW
     }); // This is necessary for cloning inside the droppable to work properly!!!
     // Clone = Clone.removeAttr("id").removeClass("ui-draggable ui-draggable-handle ui-draggable-dragging"); // This just cleans the attributes so the DOM-element looks nicer.
     Clone = Clone.removeClass("ui-draggable ui-draggable-handle ui-draggable-dragging"); // This just cleans the attributes so the DOM-element looks nicer.
