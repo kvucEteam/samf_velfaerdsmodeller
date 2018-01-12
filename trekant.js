@@ -40,9 +40,10 @@ $(window).resize(function() {
 
 $(document).ready(function() {
 
-    $('.instr_container').html(instruction_noLines(jsonData.userInterface.instruktion));
+    $('.instr_container').html(instruction(jsonData.userInterface.instruktion));
+    $('#explanationWrapper').html(explanation(jsonData.userInterface.explanation));
 
-    // jsonData.spm_tiltag = shuffle_Array(jsonData.spm_tiltag);  // Randomize spørgsmål.
+    jsonData.spm_tiltag = shuffle_Array(jsonData.spm_tiltag);  // Randomize spørgsmål.
 
     $('.numOfQuestions').text(jsonData.spm_tiltag.length);  // Opdater counter ift antallet af spørgsmål
 
@@ -84,7 +85,7 @@ function poseQuestion(runde, opgavetype) {
         // $(".opgave_header").html("<b>Hvilken sektor bliver større og hvilken bliver mindre?</b> " + (runde + 1) + "/" + jsonData.spm_tiltag.length);
         // $(".opgave_header").html("<b>Hvilken sektor bliver større og hvilken bliver mindre?</b> ");  
         $(".opgave_header").html("<b>Hvilken sektor i velfærdstrekanten bliver større og hvilken bliver mindre?</b> ");
-        $(".opgave_broedtxt").html('<span class="opgTekst">'+jsonData.spm_tiltag[runde].spm+'</span>' + '<br> <br>Flyt den grønne cirkel på modellen.');
+        $(".opgave_broedtxt").html('<span class="opgTekst">"'+jsonData.spm_tiltag[runde].spm+'"</span>' + '<br> <br>Flyt den grønne cirkel på modellen.');
         
         if (runde != runde_old) { // Kun fade ind ved nyt spørgsmål.
             $(".opgTekst").hide().fadeIn(600);  // Vi henleder kursistens opmærksomhed på en ny opgaveinstruks ved at fade opgaveinstruksen ind.
@@ -581,7 +582,7 @@ function tjeksvar2() {
             $('.MsgBox_bgr').addClass('MsgBox_goToFeedback');
             $('#UserMsgBox').addClass('MsgBox_goToFeedback');
 
-            $('.btn-goOn').html('GÅ TIL FEEDBACK');
+            $('.btn-goOn').html('Læs mere om modellerne');
         } else {
             $('.MsgBox_bgr').addClass('MsgBox_nextQuestion');
             $('#UserMsgBox').addClass('MsgBox_nextQuestion');
@@ -603,8 +604,10 @@ $(document).on('click', ".MsgBox_goToFeedback", function(event) {     // Tilføj
 });
 
 $(document).on('click', ".MsgBox_nextQuestion", function(event) {   // Tilføjet d. 11/1-2018 da TLY ønsker fadeIn på opgavespørgsmålet, således at kursisten rette sin opmærksomhed her!
-    poseQuestion(runde, opgavetype);
-    $(".opgTekst").hide().fadeIn(1000);
+    $(".opgTekst").fadeOut(400, function(){  // Tilføjet d. 12/1-2018 TLY ønsker fadeOut for understregning af kursistfokus.
+        poseQuestion(runde, opgavetype);
+        $(".opgTekst").hide().fadeIn(1000);
+    });
 });
 
 

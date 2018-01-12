@@ -11,6 +11,7 @@
     border-radius: 6px;
     cursor: pointer;
     overflow: auto;
+    overflow: hidden;  /*Tilføjet d. 12/1-2018*/
 }
 
 .cardContent {

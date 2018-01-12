@@ -128,7 +128,7 @@
 }
 
 .instr_container h4 {
-	margin-bottom: 0px;
+	/*margin-bottom: 0px;*/
 }
 
 .textHolder_mobile{
@@ -138,7 +138,11 @@
 .red {
 	background-color: #F00;
 }
-
+/*
+.scoreText {
+	margin-right: 2px;   
+}
+*/
 /******************************************************************************* 
 						Media queries
 *******************************************************************************/
