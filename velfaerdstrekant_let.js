@@ -384,7 +384,7 @@ function template2() {
 
 	// window.ajustDropzoneHeight = true;
 
-	UserMsgBox_xclick('body', '<h1 class="red">Afsluttende tekst fra Steen og Søren</h1> <div id="tryQuizAgain" class="btn btn-primary">Prøv quiz igen</div>');
+	UserMsgBox_xclick('body', '<h1>Godt arbejde - læs nu lidt mere om velfærdsopgaver og velfærdstrekanten</h1><p>Billederne viser, at den samme velfærdsopgave, fx børnepasning, uddannelse eller social sikkerhed, kan varetages af både staten, markedet eller civilsamfundet. </p><p>Det er politiske beslutninger, der afgør, hvordan de forskellige velfærdsopgaver bliver finansieret og varetaget, og dermed hvilken rolle den enkelte sektor spiller. Det kan gøre en stor forskel om fx undervisning af børn bliver varetaget af folkeskoler (staten), privatskoler (markedet) eller i hjemmet (civilsamfundet).</p><p>En politisk beslutning kan betyde, at en velfærdsopgave helt eller delvist kan flyttes fra den ene sektor til den anden, med konsekvenser for borgeren. Det er blandt andet det, de politiske ideologier handler om. Hvor og hvordan man mener, at en velfærdsopgave skal varetages og finansieres.</p><p>Eksempelvis mener liberalister, at individet og markedet kan og skal spille en større rolle. Konservative mener familien og civilsamfundet skal spille en større rolle. Og socialister mener typisk at fællesskaber og staten skal spille en større rolle.</p> <div id="tryQuizAgain" class="btn btn-primary">Prøv quiz igen</div>');
 }
 
 // The content of this function is only active when the function "template2()""

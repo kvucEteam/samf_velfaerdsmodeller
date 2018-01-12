@@ -1,5 +1,9 @@
+
 .canvas_container{
-    height: 600px;
+    /*height: 600px; */
+    width: 100%;
+    height: 600px; 
+    /*height: 100%;*/
 }
 
 #myCanvas {
@@ -22,7 +26,7 @@
 
 .btn_stat{
 	top: 12%;
-	left: 45%;
+	left: calc((100% - 85px)/2);
 	text-align: center
 }
 
@@ -37,7 +41,7 @@
 }
 
 .model_btn_container{
-	display: inline-grid;
+	/*display: inline-grid;*/
 }
 
 .btn_model{
@@ -58,3 +62,103 @@
 	margin-top: -55px;
 }
 
+
+/**************************  Styles fra THAN  *********************************/
+
+.textImg {
+	float: right;
+	/*width: 50%;*/
+	margin-left: 15px;
+	margin-bottom: 15px;
+	box-shadow: 0 0 10px #aaa;
+    /*border-radius: 4px;*/
+}
+
+.glyphicon-info-sign {
+	margin-left: 5px;
+	font-size: 1.1em;
+    top: 2px;
+}
+
+.btn_model {
+    margin: 15px 0px 0px 0px;
+}
+
+.btn_universel {  /* Social */
+ 	background-color: #eb7f81;
+}
+
+.btn_residuale {  /* Liberal */
+	background-color: #5e8bb1;
+}
+
+.btn_selektive {  /* Konservativ */
+	background-color: #91ad9c;
+}
+
+#UserMsgBox p {
+	margin-top: 10px;
+}
+
+.opgTekst {
+	font-weight: 600;
+}
+
+.MsgBox_bgr {
+	z-index: 101;
+}
+
+#UserMsgBox {
+	font-size: 14px;  /* body har font-size: 14px; */
+	/*font-size: 1.4em;*/
+	z-index: 101;
+}
+
+.btn-goOn {
+	margin-bottom: 0px;
+}
+
+.score_container_wrap {
+	margin-top: 25px;
+    margin-bottom: 10px;
+}
+.score_container {
+	position: relative;
+	/*top: 20px;*/
+}
+
+.instr_container h4 {
+	margin-bottom: 0px;
+}
+
+.textHolder_mobile{
+	margin-bottom: 15px;
+}
+
+.red {
+	background-color: #F00;
+}
+
+/******************************************************************************* 
+						Media queries
+*******************************************************************************/
+
+@media (max-width: 500px) {
+	.btn_sektor{
+		font-size: 0.7em;
+	}
+
+	.btn_stat{
+		left: calc((100% - 70px)/2);
+	}
+}
+
+@media (min-width: 501px) and (max-width: 600px) {
+	.btn_sektor{
+		font-size: 0.8em;
+	}
+
+	.btn_stat{
+		left: calc((100% - 75px)/2);
+	}
+}

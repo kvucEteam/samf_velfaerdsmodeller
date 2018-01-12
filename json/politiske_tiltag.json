@@ -1,42 +1,68 @@
 {
     "userInterface": {
-        "header": "Bevægelser i teksten 1",
-        "instruktion": "Brug data fra de tre punkter på bjerget til at udfylde alle spørgsmålstegnene i infokasserne ved vejrstationerne",
-        "explanation": "Formålet med øvelsen er at øge forståelsen af begreberne absolut luftfugtighed (AF) og relativ luftfugtighed (RF), dugpunkt og stigningsregn.",
-        "titel": "Nytårsforsætter",
+        "header": "Velfærdsmodellerne",
+        "instruktion": "<p>Lær hvordan politiske beslutninger påvirker om henholdsvis stat, marked eller civilsamfund bliver styrket eller svækket. Vurdér hvilken konsekvens eksemplerne på politiske indgreb vil få for velfærdsmodellen. Fx kan et politisk indgreb betyde at statens rolle bliver mindre, og markedets rolle bliver større. </p><p>Hver opgave tager udgangspunkt i den universelle model. De politiske beslutninger medfører således at den universelle model enten bevæger sig i en mere residual eller selektiv/korporativ retning - eller at den universelle model bliver styrket.</p>",
         "opg_1_instruks": "Hvilken sektor bliver større og hvilken bliver mindre? <br/> <br/> Flyt cursoren den rigtige retning på modellen",
-        "restart_tekst": "Prøv med et nyt bjerg",
-        "slutfeedback": "De vigtigste pointer: <ul><li>Temperaturen er steget fra den første til den sidste vejrstation i dalene</li><li>Den absolutte luftfugtighed er faldet</li><li>Den relative luftfugtighed er også faldet.</li></ul><p>Efter det har regnet af over bjergets top, er vejret på den anden side af dalen tørt og varmt. Fænomænet kaldes Fønvind og forekommer i alle store bjergegne."
-
+        "slutfeedback": "<div id='slutfeedback'><h1>Godt arbejde - læs nu om velfærdsmodeller og om fordelingen af velfærdsopgaver</h1><p>Du har vist, at du forstår, hvordan velfærdsopgaver kan varetages forskelligt af staten, markedet og civilsamfundet. Du har vist, at du forstår hvordan politiske beslutninger kan flytte ansvaret for velfærdsopgaver fra en sektor til en anden sektor.  </p><p>Det har betydning for velfærdsmodellen, hvis man styrker nogle sektorer fremfor andre. Flytter folketinget fx ansvar fra staten til markedet, vil det være en bevægelse mod en velfærdsmodel med mere residuale træk. Flytter folketinget ansvar fra staten til civilsamfundet, vil det være en bevægelse mod en velfærdsmodel med mere korporative/selektive træk. </p><p>Velfærdsopgaver bliver dog ofte varetaget af mere end én sektor. Fx bliver børn i Danmark både passet i hjemmet, i offentlige institutioner og i private institutioner. Hvis man styrker én af de tre på bekostning af en anden, så vil man kunne sige, at man har ændret lidt på velfærdsmodellen. Vi har fx også både folkepension og private pensionsordninger, og familien kan have opbygget en formue i boligen, der kan omsættes til forbrug, når man har forladt arbejdsmarkedet. </p><p>Det er også sådan, at principper fra én af sektorerne kan anvendes i de andre sektorer, fx brugerbetaling på offentlige børnehaver. Samtidig med at børnehaven er varetaget af staten, så er det kombineret med et markedsprincip om supplerende egenbetaling. Et andet eksempel er udlicitering, hvor markedsprincippet om konkurrence mellem virksomheder er overført til den offentlige sektor. </p></div>"
     },
-        "spm_tiltag": [{
-        "spm": "Folketinget gør børneydelse og SU indtægtsafhængig og indfører gensidig forsørgerpligt på kontanthjælpen",
-        "model_udgangspunkt": "Universal",
-        "korrekt_svar": [46, 28, 25],
-        "retning" : "SELEKTIV", 
-        "feedback": "Civilsamfund styrkes <br/> Marked er konstant <br/> Staten svækkes <br/> <br/>Det er en bevægelse mod en selektiv velfærdsmodel"
-    },{
-        "spm": "Folketinget beslutter at privatisere sygehuse og plejehjem og udlicitere fængslerne",
-        "model_udgangspunkt": "Universal",
-        "retning" : "<b>RESIDUAL</b>",
-        "korrekt_svar": [46, 19, 35],
-        "feedback": "Her er noget feedback til dit svar"
-    },{
-        "spm": "Folketinget beslutter at hæve topskatten for at afskaffe brugerbetaling på tandlæger, uddannelser og kollektiv trafik. ",
-        "model_udgangspunkt": "Universal",
-        "retning" : "mere UNIVERSEL",
-        "korrekt_svar": [66, 18, 15],
-        "feedback": "Her er noget feedback til dit svar"
-    }],
-        "spm_partier": [{
-        "spm": "Folketinget gør børneydelse og SU indtægtsafhængig og indfører gensidig forsørgerpligt på kontanthjælpen",
-        "model_udgangspunkt": "Universal",
-        "korrekt_svar": [66, 36, 38], 
-        "feedback": "Her er noget feedback til dit svar"
-    },{
-        "spm": "Folketinget beslutter at privatisere sygehuse og plejehjem og udlicitere fængslerne",
-        "model_udgangspunkt": "Universal",
-        "korrekt_svar": ["31", "21", "48"],
-        "feedback": "Her er noget feedback til dit svar"
-    }]
+    "spm_tiltag": [
+        {
+            "Kategori": "============================  korporativ/selektiv retning - kompas-retning: NØ  ===============================================", 
+            "spm": "Folketinget gør børneydelsen og SU-en indtægtsafhængig og indfører gensidig forsørgerpligt på kontanthjælpen. Til gengæld får borgerne en mindre skattelettelse.",
+            "model_udgangspunkt": "Universal",
+            "korrekt_svar_ny": [325],
+            "feedback_korrekt": "<p>Civilsamfundets ansvar bliver større og statens ansvar bliver mindre. Civilsamfundet overtager opgaver fra staten. Markedets rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i korporativ/selektiv retning.</p>",
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar. Tænk dig godt om og prøv igen.</p>"
+        },{
+            "spm": "Folketinget beslutter at skære ned på personalet i vuggestuer, børnehaver og fritidsordninger. Til gengæld modtager de forældre, der vælger at holde deres barn hjemme 1 eller 2 faste dage om ugen, et skattefradrag.",
+            "model_udgangspunkt": "Universal",
+            "korrekt_svar_ny": [325],
+            "feedback_korrekt": "<p>Civilsamfundets ansvar bliver større og statens ansvar bliver mindre. Civilsamfundet overtager opgaver fra staten. Markedets rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i korporativ/selektiv retning.</p>",
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar. Tænk dig godt om og prøv igen.</p>"
+        },{
+            "spm": "Folketinget beslutter, at frivillige borgere og organisationer (fx Røde kors) skal overtage en del af ældreomsorgen og pasningen af haveanlæg ved plejehjem. Dermed bliver det muligt at fyre en del af det fastansatte personale og give borgerne en skattelettelse.",
+            "model_udgangspunkt": "Universal",
+            "korrekt_svar_ny": [325],
+            "feedback_korrekt": "<p>Civilsamfundets ansvar bliver større og statens ansvar bliver mindre. Civilsamfundet overtager opgaver fra staten. Markedets rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i korporativ/selektiv retning.</p>",
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar. Tænk dig godt om og prøv igen.</p>"
+        },{
+            "Kategori": "============================  residual retning - kompas-retning: NV  ===============================================",
+            "spm": "Folketinget beslutter at privatisere sygehuse, plejehjem og at udlicitere fængslerne. Til gengæld modtager borgerne en skattelettelse.",
+            "model_udgangspunkt": "Universal",
+            "korrekt_svar_ny": [225],
+            "feedback_korrekt": "<p>Markedets ansvar bliver større og statens ansvar bliver mindre. Markedet overtager opgaver fra staten. Civilsamfundet rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i residual retning.</p>",
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor der får større ansvar og mindsket arealet af den sektor der får mindre ansvar). Tænk dig godt om og prøv igen.</p>"
+        },{
+            "spm": "Folketinget beslutter at sænke skatter og afgifter. Til gengæld skal borgerne i højere grad indstille sig på mere brugerbetaling på uddannelse, museer og biblioteker.",
+            "model_udgangspunkt": "Universal",
+            "korrekt_svar_ny": [225],
+            "feedback_korrekt": "<p>Markedets ansvar bliver større og statens ansvar bliver mindre. Markedet overtager opgaver fra staten. Civilsamfundet rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i residual retning.</p>",
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor der får større ansvar og mindsket arealet af den sektor der får mindre ansvar). Tænk dig godt om og prøv igen.</p>"
+        },{
+            "spm": "Folketinget beslutter at skære ned på den kollektive trafik. Til gengæld vil man udvide motorvejsnettet og sænke registreringsafgiften på biler.",
+            "model_udgangspunkt": "Universal",
+            "korrekt_svar_ny": [225],
+            "feedback_korrekt": "<p>Markedets ansvar bliver større og statens ansvar bliver mindre. Markedet overtager opgaver fra staten. Civilsamfundet rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i residual retning.</p>",
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor der får større ansvar og mindsket arealet af den sektor der får mindre ansvar). Tænk dig godt om og prøv igen.</p>"
+        },{
+            "Kategori": "============================  universel retning - kompas-retning: SØ   ===============================================",
+            "spm": "Folketinget beslutter at hæve topskatten. Dette gøres for at kunne afskaffe brugerbetaling på tandlæger, uddannelser og kollektiv trafik.",
+            "model_udgangspunkt": "Universal",
+            "korrekt_svar_ny": [45],
+            "feedback_korrekt": "<p>Statens ansvar bliver større og markedets ansvar bliver mindre. Staten overtager opgaver fra Markedet. Civilsamfundet rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i universel retning.</p>",
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar). Tænk dig godt om og prøv igen.</p>"
+        },{
+            "spm": "Folketinget beslutter at hæve folkepensionen. Denne ekstraudgift skal finansieres ved at sænke rentefradraget på private pensionsordninger og boliglån.",
+            "model_udgangspunkt": "Universal",
+            "korrekt_svar_ny": [45],
+            "feedback_korrekt": "<p>Statens ansvar bliver større og markedets ansvar bliver mindre. Staten overtager opgaver fra Markedet. Civilsamfundet rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i universel retning.</p>",
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar). Tænk dig godt om og prøv igen.</p>"
+        },{
+            "spm": "Folketinget beslutter at ansætte flere pædagoger og socialpædagoger, samt at gennemføre gratis kollektiv transport. Til gengæld vil borgerne modtage en skattestigning.",
+            "model_udgangspunkt": "Universal",
+            "korrekt_svar_ny": [45],
+            "feedback_korrekt": "<p>Statens ansvar bliver større og markedets ansvar bliver mindre. Staten overtager opgaver fra Markedet. Civilsamfundet rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i universel retning.</p>",
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar). Tænk dig godt om og prøv igen.</p>"
+        }
+    ]
 }

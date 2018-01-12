@@ -16,35 +16,83 @@
         <h1>Velfærdsmodeller</h1>
         <div class="instr_container"></div>
         <div id="explanationWrapper"></div>
-    
-    
-        <div class="canvas_container col-md-8 col-sm-12">
-            <canvas id="myCanvas">
-            </canvas>
-        <div class="btn btn-info btn_sektor btn_stat">STAT <span class="glyphicon glyphicon-info-sign"></span></div>
-        <div class="btn btn-info btn_sektor btn_marked">MARKED <span class="glyphicon glyphicon-info-sign"></span></div>
-        <div class="btn btn-info btn_sektor btn_civil">CIVILSAMFUND <span class="glyphicon glyphicon-info-sign"></span></div>
+
+        <div class="textHolder textHolder_mobile hidden-md hidden-lg"> 
+            <h4 class="opgave_header"></h4>
+            <p class="opgave_broedtxt"></p>
+            <h4 class="output"></h4>    
         </div>
-     <div class="col-md-4 col-sm-12 opg_cont">
-        <h4 class="opgave_header"></h4>
-        <p class="opgave_broedtxt"></p>
+    
+        <div class="col-md-8 col-sm-12 canvas_container_wrap">
+            <div class="canvas_container">
+                <canvas id="myCanvas" resize="true"></canvas>
+                <div class="btn btn-info btn_sektor btn_stat">STAT <span class="glyphicon glyphicon-info-sign"></span></div>
+                <div class="btn btn-info btn_sektor btn_marked">MARKED <span class="glyphicon glyphicon-info-sign"></span></div>
+                <div class="btn btn-info btn_sektor btn_civil">CIVILSAMFUND <span class="glyphicon glyphicon-info-sign"></span></div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+            <div class="textHolder hidden-xs hidden-sm">
+                <h4 class="opgave_header"></h4>
+                <p class="opgave_broedtxt"></p>
+                <h4 class="output"></h4>    
+            </div>
         
-        <h4 class="output"></h4>    
-    </div>
-   
-    
-<div class ="model_btn_container">
-    <div class="btn btn-info btn_model">Den universelle model <span class="glyphicon glyphicon-info-sign"></span></div>
-    <div class="btn btn-info btn_model">Den residuale model <span class="glyphicon glyphicon-info-sign"></span></div>
-    <div class="btn btn-info btn_model">Den selektive model <span class="glyphicon glyphicon-info-sign"></span></div>
-    
-</div>
+            <div class="score_container_wrap">
+                <div class="score_container">
+                    <span class="scoreText">Korrekte svar: </span><span class="QuestionCounter QuestionTask"><span class="success">0</span> ud af <span class="numOfQuestions">0</span></span> <span class="scoreText"> Forsøg: </span><span class="ErrorCount QuestionTask attempt">0</span>
+                </div>
+            </div>
+            <div class="Clear"></div>
+       
+            <div class ="model_btn_container">
+                <div class="btn btn-info btn_model">Den universelle model <span class="glyphicon glyphicon-info-sign"></span></div>
+                <div class="btn btn-info btn_model">Den residuale model <span class="glyphicon glyphicon-info-sign"></span></div>
+                <div class="btn btn-info btn_model">Den korporative/selektive model <span class="glyphicon glyphicon-info-sign"></span></div>
+            </div>
+        </div>
         
     </div>
     <script src="../library/vendor_scripts.js">
     </script>
     <script src="../library/custom_scripts.js">
     </script>
+
+    <script type="text/javascript">
+
+        // VIGTIGT: 
+        // Denne funktion skal placeres før paper.js kaldes, således at myCanvas og canvas_container kan scaleres uden at 
+        // paper.js laver om på værdierne for height og width.
+        // BESKRIVELSE:
+        // Funktionen justere forholdet mellem bredde og højde således at det passer ift en ligesidet trekant (dvs en trekant hvor alle ben er lige lange).
+        // Højden skal være 86.6% (eller (3/4)^2 = 0.866025...) af bredden, som kan findes via Pythgoras: 
+        // x^2 + (1/2)^2 = 1^2  <==>  x = (1 - (1/2)^2)^0.5 = (1 - 1/4)^0.5 = (3/4)^0.5 = (3)^0.5/2 = 0.866025...
+        function ajustCanvas() {
+            // var w = $('#myCanvas').width();
+            var w = $('.canvas_container_wrap').width();
+            var h = w*0.866025;
+
+            $("#myCanvas").height(h);
+            $("#myCanvas").width(w);
+            $(".canvas_container").height(h);
+            $(".canvas_container").width(w);
+
+            // NOTE:
+            // Bizart nok fungere denne resize metode (se $(window).resize() i trekant.js) bedst hvor både height og width i attributerne "style" og "height" og "width" sættes.  
+            // Dette hænger måske sammen med at paper.js sandsynligvis "kigger" i css under initialisering - se: 
+            // https://stackoverflow.com/questions/28896260/paper-js-wont-resize-the-canvas-correctly
+            $("#myCanvas").attr('height', h);
+            $("#myCanvas").attr('width', w);
+            $(".canvas_container").attr('height', h);
+            $(".canvas_container").attr('width', w);
+
+            console.log('ajustCanvas: width: ' + $('#myCanvas').width() + ', height: ' + $('#myCanvas').height() + ', w: ' + w + ', h: ' + h);
+        }
+        ajustCanvas();
+
+    </script>
+
     <script type="text/paperscript" src="trekant.js" canvas="myCanvas">
     </script>
     <script type="text/javascript ">
