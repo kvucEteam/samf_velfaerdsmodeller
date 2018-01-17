@@ -251,7 +251,7 @@ function generateAttrStr(attrObj) {
     var keyArr = Object.keys(attrObj);
     for (var n in keyArr) {
         if (typeof(attrObj[keyArr[n]]) !== 'undefined') {
-            HTML += keyArr[n] + '="' + attrObj[keyArr[n]] + '" ';
+            HTML += keyArr[n] + '="' + attrObj[keyArr[n]] + '" '; 
         }
     }
 
@@ -271,7 +271,11 @@ function SimpleClone(TargetSelector) {
         'left': 'auto',
         'z-index': '0',
         // 'height': '83%',
-        'height': '55%', // <---- NEW
+
+        // 'height': '55%', // <---- NEW   		// COMMENTED OUT 12/1-2018
+        'height': '35%', // <---- NEW      		// ADDED 12/1-2018   -->  Fixer dette problemet i win 7 edge + 10???
+        'margin-bottom': '20%',  // <---- NEW   // ADDED 12/1-2018   -->  Fixer dette problemet i win 7 edge + 10??? + Dette virker OK!
+
         'width': '35%'    // <---- NEW
     }); // This is necessary for cloning inside the droppable to work properly!!!
     // Clone = Clone.removeAttr("id").removeClass("ui-draggable ui-draggable-handle ui-draggable-dragging"); // This just cleans the attributes so the DOM-element looks nicer.
