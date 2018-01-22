@@ -11,19 +11,19 @@
             "Kategori": "============================  korporativ/selektiv retning - kompas-retning: NØ  ===============================================", 
             "spm": "Folketinget gør børneydelsen og SU-en indtægtsafhængig og indfører gensidig forsørgerpligt på kontanthjælpen. Til gengæld får borgerne en mindre skattelettelse.",
             "model_udgangspunkt": "Universal",
-            "korrekt_svar_ny": [325],
+            "korrekt_svar_ny": [315],
             "feedback_korrekt": "<p>Civilsamfundets ansvar bliver større og statens ansvar bliver mindre. Civilsamfundet overtager opgaver fra staten. Markedets rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i korporativ/selektiv retning.</p>",
             "feedback_forkert": "<p>Du har bevæget dig i forkert retning. Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar. Tænk dig godt om og prøv igen.</p>"
         },{
             "spm": "Folketinget beslutter at skære ned på personalet i vuggestuer, børnehaver og fritidsordninger. Til gengæld modtager de forældre, der vælger at holde deres barn hjemme 1 eller 2 faste dage om ugen, et skattefradrag.",
             "model_udgangspunkt": "Universal",
-            "korrekt_svar_ny": [325],
+            "korrekt_svar_ny": [315],
             "feedback_korrekt": "<p>Civilsamfundets ansvar bliver større og statens ansvar bliver mindre. Civilsamfundet overtager opgaver fra staten. Markedets rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i korporativ/selektiv retning.</p>",
             "feedback_forkert": "<p>Du har bevæget dig i forkert retning. Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar. Tænk dig godt om og prøv igen.</p>"
         },{
             "spm": "Folketinget beslutter, at frivillige borgere og organisationer (fx Røde kors) skal overtage en del af ældreomsorgen og pasningen af haveanlæg ved plejehjem. Dermed bliver det muligt at fyre en del af det fastansatte personale og give borgerne en skattelettelse.",
             "model_udgangspunkt": "Universal",
-            "korrekt_svar_ny": [325],
+            "korrekt_svar_ny": [315],
             "feedback_korrekt": "<p>Civilsamfundets ansvar bliver større og statens ansvar bliver mindre. Civilsamfundet overtager opgaver fra staten. Markedets rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i korporativ/selektiv retning.</p>",
             "feedback_forkert": "<p>Du har bevæget dig i forkert retning. Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar. Tænk dig godt om og prøv igen.</p>"
         },{
