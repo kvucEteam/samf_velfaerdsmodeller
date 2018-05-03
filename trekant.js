@@ -19,6 +19,7 @@ var universel_values = [56, 18, 26];
 
 var cordStart = []; 
 var cordEnd = []; 
+var areasPct = {start: {civil: null, marked: null, stat: null}, end: {civil: null, marked: null, stat: null}};   // Tilføjet d. 26/4-2018. Dette objekt rummer de procentvise størrelser på arealerne af sektorene. 
 var studerendeHarSvaretKorrekt = false;
 var runde_old = 0;
 var attempt = 0;
@@ -31,6 +32,7 @@ $(window).resize(function() {
 
     ajustCanvas();   // <----------  VIGTIGT: Denne funktion er defineret i trekant.html og køres første gang INDEN paper.js indlæses med alle funktioner i trekant.js!
     drawTriangle(.75, .43);
+    areasPct.start = {civil: venstre_pct, marked: hojre_pct, stat: top_pct};
     draw_draggable();
 
 });
@@ -43,7 +45,7 @@ $(document).ready(function() {
     $('.instr_container').html(instruction(jsonData.userInterface.instruktion));
     $('#explanationWrapper').html(explanation(jsonData.userInterface.explanation));
 
-    jsonData.spm_tiltag = shuffle_Array(jsonData.spm_tiltag);  // Randomize spørgsmål.
+    // jsonData.spm_tiltag = shuffle_Array(jsonData.spm_tiltag);  // Randomize spørgsmål.
 
     $('.numOfQuestions').text(jsonData.spm_tiltag.length);  // Opdater counter ift antallet af spørgsmål
 
@@ -70,6 +72,7 @@ $(document).ready(function() {
 function poseQuestion(runde, opgavetype) {
 
     drawTriangle(.75, .43);
+    areasPct.start = {civil: venstre_pct, marked: hojre_pct, stat: top_pct};
     cordStart = [.75, .43];  // toppos, leftpos
     draw_draggable();
 
@@ -336,6 +339,7 @@ function draw_draggable() {
             triangle.remove();
 
             drawTriangle(pct_height, pct_width);
+            areasPct.end = {civil: venstre_pct, marked: hojre_pct, stat: top_pct};
             cordEnd = [pct_height, pct_width];    // toppos, leftpos
 
             crosshair.bringToFront();
@@ -356,15 +360,15 @@ function draw_draggable() {
 
         // tjeksvar2();
 
-        // if (streg.length > 40) {
+        if (streg.length > 40) {
             
             tjeksvar2();
 
             // tjeksvar();
             
-        // } else {
-        //     crosshairfeedback("<p>Du skal ændre modellen mere drastisk for at afgive et svar</p>");
-        // }
+        } else {
+            crosshairfeedback("<p>Du skal ændre modellen mere drastisk for at afgive et svar</p>");
+        }
     }
 
 }
@@ -551,16 +555,28 @@ function crosshairfeedback(html) {
 function tjeksvar2() { 
 
     var tolerance = 30;  // Tolerance på 20 grader. FR ønsker denne sat til 30 grader efter test d. 11/1-2018
-    var svarVinkel = posAngle(null, null);
+    var tolerance_ambiguous = 45;  // Denne vinkel på 45 grader giver et interval på 45 - 30 = 15 grader til, hver side hvor kursisten får en speciel fejlbesked om at deres svar ikke er "tydeligt nok". 
+    
+    // var svarVinkel = posAngle(null, null);
+    var posAngleObj = posAngle(null, null);
+    var svarVinkel = posAngleObj.svarVinkel;
+    var m = posAngleObj.msg_obj;
+    var c = posAngleObj.msg_compass;
+
     studerendeHarSvaretKorrekt = false;
+    // studerendeHarIkkeSvaretTilstraekkeligtKorrekt = false;   // Tilføjet d. 30/5-2018. Afklar med FR før kode tages i brug.
 
     var svarVinkler = jsonData.spm_tiltag[runde].korrekt_svar_ny;
     for (var v in svarVinkler) {
         if ((svarVinkler[v]-tolerance <= svarVinkel) && (svarVinkel < svarVinkler[v]+tolerance)) {
             studerendeHarSvaretKorrekt = true;
-
             break;
         }
+
+        // if ((svarVinkler[v]-tolerance_ambiguous < svarVinkel) && (svarVinkel < svarVinkler[v]+tolerance_ambiguous)) {  // Tilføjet d. 30/5-2018. Afklar med FR før kode tages i brug.
+        //     studerendeHarIkkeSvaretTilstraekkeligtKorrekt = true;
+        //     break;
+        // }
     }
 
     console.log('tjeksvar2 - runde: ' + runde + ', svarVinkel: ' + svarVinkel + ', svarVinkler: ' + svarVinkler );
@@ -571,6 +587,7 @@ function tjeksvar2() {
         UserMsgBox("body", '<h3>Du har svaret <span class="label label-success">Korrekt!</span> </h3>' + jsonData.spm_tiltag[runde].feedback_korrekt + '<span class="btn btn-lg btn-primary btn-goOn">GÅ VIDERE</span>');   // Tilføjet d. 11/1-2018
         project.activeLayer.removeChildren();   // Tilføjet d. 11/1-2018 - Reset trekanten
         drawTriangle(.75, .43);                 // Tilføjet d. 11/1-2018 - Reset trekanten
+        areasPct.start = {civil: venstre_pct, marked: hojre_pct, stat: top_pct};
         draw_draggable();                       // Tilføjet d. 11/1-2018 - Reset trekanten
 
         runde++;
@@ -590,12 +607,21 @@ function tjeksvar2() {
 
     } else {
         console.log('tjeksvar2 - FALSE');
-        crosshairfeedback("<div class='microhint_label_danger'>Forkert</div>"  + jsonData.spm_tiltag[runde].feedback_forkert);
+        // if (studerendeHarIkkeSvaretTilstraekkeligtKorrekt) {   // Tilføjet d. 30/5-2018. Afklar med FR før kode tages i brug.
+        //     crosshairfeedback("<div class='microhint_label_danger'>Forkert XXX</div>"  + jsonData.spm_tiltag[runde].feedback_forkert);
+        // } else {
+            // crosshairfeedback("<div class='microhint_label_danger'>Forkert</div>"  + jsonData.spm_tiltag[runde].feedback_forkert);  // OLD
+            // crosshairfeedback("<div class='microhint_label_danger'>Forkert</div>"  + jsonData.spm_tiltag[runde].feedback_forkert + '<p><i class="hintClass">Hint: du har trukket cirklen i '+c+'lig retning, dvs. gjordt arealet af civilsamfundet '+m.civil+', markedet '+m.marked+' og staten '+m.stat+'. '+jsonData.spm_tiltag[runde].hint_retning+'</i></p>');     // NEW
+            crosshairfeedback('<div class="microhint_label_danger">Forkert</div> Hint: du har trukket cirklen i '+c+'lig retning, dvs. gjort arealet af civilsamfundet '+m.civil+', markedet '+m.marked+' og staten '+m.stat+'. '+jsonData.spm_tiltag[runde].hint_retning);  // Tilføjet d. 3/5-2018. FR ønsker dette hint i stedet for generel feedback fra JSON.
+        // }
     }
     ++attempt;
     $('.attempt').html(attempt);
 
 }
+
+
+
 
 $(document).on('click', ".MsgBox_goToFeedback", function(event) {     // Tilføjet d. 11/1-2018 
     $('.MsgBox_bgr').remove();  // Fjern den gamle userMsgBox
@@ -623,17 +649,59 @@ function posAngle(Dx, Dy) {
     var a = Math.atan(Math.abs(Dy)/Math.abs(Dx))*180/Math.PI;   // Absolut vinkel i grader
     console.log('posAngle - ax 1: ' + a);
 
-    if ((Dx<0) && (Dy>0)) { a = 180 - a; }
-    if ((Dx<0) && (Dy<0)) { a = 180 + a; }
-    if ((Dx<0) && (Dy==0)){ a = 180; }
-    if ((Dx==0) && (Dy<0)){ a = 270; }
-    if ((Dx>0) && (Dy<0)) { a = 360-a; }
+    var msg_compass;
+    var msg_obj;
 
-    console.log('posAngle - ax 2: ' + a);
+    // Beregninger af vinkler:
+    // =======================
+    if ((Dx>0) && (Dy>0)) { a = a; }        // Syd-Øst
+    if ((Dx<0) && (Dy>0)) { a = 180 - a; }  // Syd-Vest 
+    if ((Dx<0) && (Dy<0)) { a = 180 + a; }  // Nord-vest
+    if ((Dx>0) && (Dy<0)) { a = 360-a; }    // Nord-Øst
+    if ((Dx<0) && (Dy==0)){ a = 180; }      // Øst
+    if ((Dx==0) && (Dy<0)){ a = 270; }      // Nord
 
-    console.log('posAngle - FINAL - a : ' + a);
+    // Beregninger af kardinal-retning som cirklen er trukket:  (retning er opdelt i 8 "kardinal-retninger": øst (0 grader), syd-øst (45 grader), syd (90 grader), syd-vest (135 grader), osv osv)
+    // =======================================================
+    var minVal = 361; // Største værdi.
+    var minValAngle = null;
+    for (var i = 0; i <= 8; i++) {   
+        if (Math.abs(45*i - a) < minVal) {  // 45*i ---> 0, 45, 90, 135, 180, 225, 270, 315, 360.  NOTE:  360 = 0 <------ VIGTIGT!
+            minVal = Math.abs(45*i - a);
+            minValAngle = 45*i;
+        }
+    }
 
-    return a;
+    console.log('posAngle 1 - FINAL - a : ' + a + ', minVal: ' + minVal + ', minValAngle: ' + minValAngle);
+    minValAngle = (minValAngle==360)?0:minValAngle;  // NOTE: 0 = 360 korrigering!
+
+    console.log('posAngle 2 - FINAL - a : ' + a + ', minVal: ' + minVal + ', minValAngle: ' + minValAngle);
+
+    console.log('posAngle - msg_compass: ' + msg_compass);
+    console.log('posAngle - msg_obj: ' + JSON.stringify(msg_obj));
+
+    console.log('posAngle - areasPct: ' + JSON.stringify(areasPct));
+    console.log('posAngle - areaDiff - civil: ' + String((areasPct.end.civil-areasPct.start.civil)) + ', marked: ' + String((areasPct.end.marked-areasPct.start.marked)) + ', stat: ' + String((areasPct.end.stat-areasPct.start.stat)));
+    
+    console.log('posAngle - drawTriangle - top_pct: ' + top_pct + ', venstre_pct: ' + venstre_pct + ', hojre_pct: ' + hojre_pct);
+
+    // Beskeder til kursisten:
+    // =======================
+    if (minValAngle == 0)   {msg_compass = 'øst';      msg_obj = {civil: 'større', marked: 'mindre', stat: 'uændret'};}
+    if (minValAngle == 45)  {msg_compass = 'syd-øst';  msg_obj = {civil: 'uændret', marked: 'mindre', stat: 'større'};}
+    if (minValAngle == 90)  {msg_compass = 'syd';      msg_obj = {civil: 'mindre', marked: 'mindre', stat: 'større'};}
+    if (minValAngle == 135) {msg_compass = 'syd-vest'; msg_obj = {civil: 'mindre', marked: 'uændret', stat: 'større'};}
+    if (minValAngle == 180) {msg_compass = 'vest';     msg_obj = {civil: 'mindre', marked: 'større', stat: 'uændret'};}
+    if (minValAngle == 225) {msg_compass = 'nord-vest';msg_obj = {civil: 'uændret', marked: 'større', stat: 'mindre'};}
+    if (minValAngle == 270) {msg_compass = 'nord';     msg_obj = {civil: 'større', marked: 'større', stat: 'mindre'};}
+    if (minValAngle == 315) {msg_compass = 'nord-øst'; msg_obj = {civil: 'større', marked: 'uændret', stat: 'mindre'};}
+
+    return {svarVinkel: a, msg_compass: msg_compass, msg_obj: msg_obj};
+}
+
+
+function calcAreaDiffs(){
+    var A_top = 1.732050808/4*toppos;
 }
 
 

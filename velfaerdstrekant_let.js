@@ -103,7 +103,7 @@ function makeCardPile(){  							// ADDED d. 04-12-2017
 		// if (n == 3) break;
 	}
 	return HTML;
-}
+}	
 
 function ShuffelArray(ItemArray){
     var NumOfItems = ItemArray.length;
@@ -273,8 +273,10 @@ function SimpleClone(TargetSelector) {
         // 'height': '83%',
 
         // 'height': '55%', // <---- NEW   		// COMMENTED OUT 12/1-2018
-        'height': '35%', // <---- NEW      		// ADDED 12/1-2018   -->  Fixer dette problemet i win 7 edge + 10???
-        'margin-bottom': '20%',  // <---- NEW   // ADDED 12/1-2018   -->  Fixer dette problemet i win 7 edge + 10??? + Dette virker OK!
+        // 'height': '35%', // <---- NEW      		// ADDED 12/1-2018   -->  Fixer dette problemet i win 7 edge + 10???
+        'height': '40%', // <---- NEW      		// ADDED 3/5-2018   -->  Fixer dette problemet i win 7 edge + 10???
+        // 'margin-bottom': '20%',  // <---- NEW   // ADDED 12/1-2018   -->  Fixer dette problemet i win 7 edge + 10??? + Dette virker OK!
+        'margin-bottom': '15%',  // <---- NEW   // ADDED 3/5-2018   -->  Fixer dette problemet i win 7 edge + 10??? + Dette virker OK!
 
         'width': '35%'    // <---- NEW
     }); // This is necessary for cloning inside the droppable to work properly!!!
@@ -589,6 +591,11 @@ function detectBootstrapBreakpoints(){
         bootstrapBreakpointSize = $( "#bootstrapBreakpointWrapper>span:visible" ).prop('class').split('-')[1];
         console.log('detectBootstrapBreakpoints - bootstrapBreakpointSize: ' + bootstrapBreakpointSize + ', typeof(bootstrapBreakpointSize): ' + typeof(bootstrapBreakpointSize));
     });
+}
+
+
+function resizeImg() {
+	// $().width();
 }
 
 

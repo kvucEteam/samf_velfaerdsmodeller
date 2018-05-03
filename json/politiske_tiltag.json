@@ -13,57 +13,66 @@
             "model_udgangspunkt": "Universal",
             "korrekt_svar_ny": [315],
             "feedback_korrekt": "<p>Civilsamfundets ansvar bliver større og statens ansvar bliver mindre. Civilsamfundet overtager opgaver fra staten. Markedets rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i korporativ/selektiv retning.</p>",
-            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar. Tænk dig godt om og prøv igen.</p>"
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar. Tænk dig godt om og prøv igen.</p>",
+            "hint_retning": "Du skal gøre arealet af civilsamfundet større og staten mindre."
         },{
             "spm": "Folketinget beslutter at skære ned på personalet i vuggestuer, børnehaver og fritidsordninger. Til gengæld modtager de forældre, der vælger at holde deres barn hjemme 1 eller 2 faste dage om ugen, et skattefradrag.",
             "model_udgangspunkt": "Universal",
             "korrekt_svar_ny": [315],
             "feedback_korrekt": "<p>Civilsamfundets ansvar bliver større og statens ansvar bliver mindre. Civilsamfundet overtager opgaver fra staten. Markedets rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i korporativ/selektiv retning.</p>",
-            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar. Tænk dig godt om og prøv igen.</p>"
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar. Tænk dig godt om og prøv igen.</p>",
+            "hint_retning": "Du skal gøre arealet af civilsamfundet større og staten mindre."
         },{
             "spm": "Folketinget beslutter, at frivillige borgere og organisationer (fx Røde kors) skal overtage en del af ældreomsorgen og pasningen af haveanlæg ved plejehjem. Dermed bliver det muligt at fyre en del af det fastansatte personale og give borgerne en skattelettelse.",
             "model_udgangspunkt": "Universal",
             "korrekt_svar_ny": [315],
             "feedback_korrekt": "<p>Civilsamfundets ansvar bliver større og statens ansvar bliver mindre. Civilsamfundet overtager opgaver fra staten. Markedets rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i korporativ/selektiv retning.</p>",
-            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar. Tænk dig godt om og prøv igen.</p>"
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar. Tænk dig godt om og prøv igen.</p>",
+            "hint_retning": "Du skal gøre arealet af civilsamfundet større og staten mindre."
         },{
             "Kategori": "============================  residual retning - kompas-retning: NV  ===============================================",
             "spm": "Folketinget beslutter at privatisere sygehuse, plejehjem og at udlicitere fængslerne. Til gengæld modtager borgerne en skattelettelse.",
             "model_udgangspunkt": "Universal",
             "korrekt_svar_ny": [225],
             "feedback_korrekt": "<p>Markedets ansvar bliver større og statens ansvar bliver mindre. Markedet overtager opgaver fra staten. Civilsamfundet rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i residual retning.</p>",
-            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor der får større ansvar og mindsket arealet af den sektor der får mindre ansvar). Tænk dig godt om og prøv igen.</p>"
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor der får større ansvar og mindsket arealet af den sektor der får mindre ansvar). Tænk dig godt om og prøv igen.</p>",
+            "hint_retning": "Du skal gøre arealet af markedet større og staten mindre."
         },{
             "spm": "Folketinget beslutter at sænke skatter og afgifter. Til gengæld skal borgerne i højere grad indstille sig på mere brugerbetaling på uddannelse, museer og biblioteker.",
             "model_udgangspunkt": "Universal",
             "korrekt_svar_ny": [225],
             "feedback_korrekt": "<p>Markedets ansvar bliver større og statens ansvar bliver mindre. Markedet overtager opgaver fra staten. Civilsamfundet rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i residual retning.</p>",
-            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor der får større ansvar og mindsket arealet af den sektor der får mindre ansvar). Tænk dig godt om og prøv igen.</p>"
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor der får større ansvar og mindsket arealet af den sektor der får mindre ansvar). Tænk dig godt om og prøv igen.</p>",
+            "hint_retning": "Du skal gøre arealet af markedet større og staten mindre."
         },{
             "spm": "Folketinget beslutter at skære ned på den kollektive trafik. Til gengæld vil man udvide motorvejsnettet og sænke registreringsafgiften på biler.",
             "model_udgangspunkt": "Universal",
             "korrekt_svar_ny": [225],
             "feedback_korrekt": "<p>Markedets ansvar bliver større og statens ansvar bliver mindre. Markedet overtager opgaver fra staten. Civilsamfundet rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i residual retning.</p>",
-            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor der får større ansvar og mindsket arealet af den sektor der får mindre ansvar). Tænk dig godt om og prøv igen.</p>"
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor der får større ansvar og mindsket arealet af den sektor der får mindre ansvar). Tænk dig godt om og prøv igen.</p>",
+            "hint_retning": "Du skal gøre arealet af markedet større og staten mindre."
         },{
             "Kategori": "============================  universel retning - kompas-retning: SØ   ===============================================",
             "spm": "Folketinget beslutter at hæve topskatten. Dette gøres for at kunne afskaffe brugerbetaling på tandlæger, uddannelser og kollektiv trafik.",
             "model_udgangspunkt": "Universal",
             "korrekt_svar_ny": [45],
             "feedback_korrekt": "<p>Statens ansvar bliver større og markedets ansvar bliver mindre. Staten overtager opgaver fra Markedet. Civilsamfundet rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i universel retning.</p>",
-            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar). Tænk dig godt om og prøv igen.</p>"
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar). Tænk dig godt om og prøv igen.</p>",
+            "hint_retning": "Du skal gøre arealet af markedet mindre og staten større."
         },{
             "spm": "Folketinget beslutter at hæve folkepensionen. Denne ekstraudgift skal finansieres ved at sænke rentefradraget på private pensionsordninger og boliglån.",
             "model_udgangspunkt": "Universal",
             "korrekt_svar_ny": [45],
             "feedback_korrekt": "<p>Statens ansvar bliver større og markedets ansvar bliver mindre. Staten overtager opgaver fra Markedet. Civilsamfundet rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i universel retning.</p>",
-            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar). Tænk dig godt om og prøv igen.</p>"
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar). Tænk dig godt om og prøv igen.</p>",
+            "hint_retning": "Du skal gøre arealet af markedet mindre og staten større."
         },{
             "spm": "Folketinget beslutter at ansætte flere pædagoger og socialpædagoger, samt at gennemføre gratis kollektiv transport. Til gengæld vil borgerne modtage en skattestigning.",
             "model_udgangspunkt": "Universal",
             "korrekt_svar_ny": [45],
             "feedback_korrekt": "<p>Statens ansvar bliver større og markedets ansvar bliver mindre. Staten overtager opgaver fra Markedet. Civilsamfundet rolle forbliver uændret i dette eksempel.</p><p>Det vil være en bevægelse i universel retning.</p>",
-            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar). Tænk dig godt om og prøv igen.</p>"
+            "feedback_forkert": "<p>Du har bevæget dig i forkert retning. (Du har ikke øget arealet af den sektor, der får større ansvar og mindsket arealet af den sektor, der får mindre ansvar). Tænk dig godt om og prøv igen.</p>",
+            "hint_retning": "Du skal gøre arealet af markedet mindre og staten større."
         }
     ]
 }
