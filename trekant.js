@@ -45,7 +45,7 @@ $(document).ready(function() {
     $('.instr_container').html(instruction(jsonData.userInterface.instruktion));
     $('#explanationWrapper').html(explanation(jsonData.userInterface.explanation));
 
-    // jsonData.spm_tiltag = shuffle_Array(jsonData.spm_tiltag);  // Randomize spørgsmål.
+    jsonData.spm_tiltag = shuffle_Array(jsonData.spm_tiltag);  // Randomize spørgsmål.
 
     $('.numOfQuestions').text(jsonData.spm_tiltag.length);  // Opdater counter ift antallet af spørgsmål
 
