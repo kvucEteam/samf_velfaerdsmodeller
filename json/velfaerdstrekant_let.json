@@ -180,7 +180,7 @@
 					"type": "img",
 					"img": {
 						"attr": {"class": "imgWrap cardContent"},
-						"imgSrc": "img/bank.png"
+						"imgSrc": "img/pensionsselskab.png"
 					},
 					"correctDropzoneNum": [3],
 					"feedback": {
