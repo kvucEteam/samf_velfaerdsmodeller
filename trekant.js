@@ -59,9 +59,9 @@ $(document).ready(function() {
     // Der er to containere i DOM'en med klassen "textHolder" (og child "opgave_broedtxt"): den ene vises på desktop, den anden i mobil.
     $('.opgave_broedtxt:visible').addClass('microhint_target');  // Find den "opgave_broedtxt" der er synlig og tilføj klassen "microhint_target"
     $('.opgave_broedtxt:hidden').removeClass('microhint_target');  // Find den "opgave_broedtxt" der er gemt og fjern klassen "microhint_target"
-    microhint($('.microhint_target'), 'Her finder du opgaverne', true, '#000'); // Tilføj et microhint på "microhint_target"
+    microhint($('.microhint_target'), 'Her finder du opgaverne.', true, '#000'); // Tilføj et microhint på "microhint_target"
 
-    microhint($('.btn_model'), 'Start med at læse om de tre modeller', true, '#000');
+    // FJERNET 17 / 3 ATO + TLY microhint($('.btn_model'), 'Start med at læse om de tre modeller', true, '#000');
 
 });
 
@@ -590,7 +590,7 @@ function tjeksvar2() {
 
     } else {
         console.log('tjeksvar2 - FALSE');
-        crosshairfeedback("<div class='microhint_label_danger'>Forkert</div>"  + jsonData.spm_tiltag[runde].feedback_forkert);
+        crosshairfeedback("<div class='microhint_label_danger'>Forkert retning</div>"  + jsonData.spm_tiltag[runde].feedback_forkert);
     }
     ++attempt;
     $('.attempt').html(attempt);
