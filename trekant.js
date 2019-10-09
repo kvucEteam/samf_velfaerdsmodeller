@@ -614,6 +614,7 @@ function tjeksvar2() {
             // crosshairfeedback("<div class='microhint_label_danger'>Forkert</div>"  + jsonData.spm_tiltag[runde].feedback_forkert + '<p><i class="hintClass">Hint: du har trukket cirklen i '+c+'lig retning, dvs. gjordt arealet af civilsamfundet '+m.civil+', markedet '+m.marked+' og staten '+m.stat+'. '+jsonData.spm_tiltag[runde].hint_retning+'</i></p>');     // NEW
             crosshairfeedback('<div class="microhint_label_danger">Forkert</div> Hint: du har trukket cirklen i '+c+'lig retning, dvs. gjort arealet af civilsamfundet '+m.civil+', markedet '+m.marked+' og staten '+m.stat+'. '+jsonData.spm_tiltag[runde].hint_retning);  // Tilføjet d. 3/5-2018. FR ønsker dette hint i stedet for generel feedback fra JSON.
         // }
+         
     }
     ++attempt;
     $('.attempt').html(attempt);
